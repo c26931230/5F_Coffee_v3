@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5F coffee | Menu</title>
+   
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/grid_system.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- font David Libre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <!-- ico -->
+    <script src="https://kit.fontawesome.com/cdbf7190c7.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="logo.ico">
+    <!-- js -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <!-- <script src="js/all.js"></script> -->
+</head>
+<body>
+    <!-- header -->
+    <input type="checkbox" id="switch">
+    <header class="header">
+        
+        <div class="wrap">
+            <!-- bar -->
+            <label class="hb" for="switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="logo_box">
+                <a href="index.html"><img src="image/5flogo.png" alt="5F Coffee"></a>
+            </div>
+            <!-- nav -->
+            <nav class="nav">
+                <ul class="nav_links">
+                    <li class="tab"><a href="menu.html">Menu</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="faq.html" class="faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <!-- function -->
+            <div class="function_box">
+                <a href="member.html"><i class="fa-solid fa-user"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+    <!--switch menu-->
+    <div id="switch_menu">Click me!</div>
+    <!-- menu_bar -->
+   <section class="menu_bar">
+    <p class="menu_slogan">Coffee, Tea, and Conversation Since 2020.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <a href="#pastry">
+                        <figure class="item">
+                            <img src="image/pastry.jpg" alt="pastry">
+                            <figcaption class="layer">
+                                <h2>Pastry</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-4 col-12 coffee_btn">
+                    <a href="#coffee">
+                        <figure class="item">
+                            <img src="image/coffee.jpg" alt="pastry">
+                            <figcaption class="layer">
+                                <h2>Coffee</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-4 col-12">
+                    <a href="#tea">
+                        <figure class="item">
+                            <img src="image/tea.jpg" alt="tea">
+                            <figcaption class="layer">
+                                <h2>Tea</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+   </section>
+    <!-- coffee -->
+    <section class="menu_box coffee_menu_box" id="coffee">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6" >
+                    <div class="title_box">
+                        <h2>Coffee</h2>
+                        <p>It's not just coffee,<br>it's an experience. </p>
+                    </div>
+                </div>
+                <!-- c1 -->
+                <div class="col-6 col-md-3">
+                    <div class="item test">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee1.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Esprseeo/Water</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Americano</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c2 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee2.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Only Espresso</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Espresso</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-mug-hot"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c3 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee3.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Made by steeping ground coffee in room-temperature water for several hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Cold Brew</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c4 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee4.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Milk / Foam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Hot Latte</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-mug-hot"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c5 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee5.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Milk / Foam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Ice Latte</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c6 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee6.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Chocolate / Milk / Whipped Cream</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Mocha</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c7 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee7.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Milk / Foam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Cappuccino</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c8 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee8.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Ice Cream</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Affogato</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c9 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee9.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>Espresso / Lemon / Soda Water</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Espresso Romano</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c10 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/coffee10.jpg" alt="coffee">
+                                <div class="back">
+                                    <p>We offer all kinds of coffee beans!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Pour Over Coffee</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pastry section -->
+    <section class="menu_box pastry_menu_box" id="pastry">
+        <div class="container">
+            <div class="row">
+                <!-- p1 -->
+                <div class="col-6 col-md-3 p1">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry1.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Brownie / Ice Cream / Caramel /Wafer Roll</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Brownie</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- p2 -->
+                <div class="col-6 col-md-3 p2">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry2.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Espresso / Mascarpone / Cocoa Powder / Liqueur</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Tiramisu</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 pastry_title" >
+                    <div class="title_box">
+                        <h2>Pastry</h2>
+                        <p>Life is short,<br>eat dessert first.</p>
+                    </div>
+                </div>
+                <!-- p3 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry3.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Almond /  Icing Sugar / Egg Whites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Ricciarelli</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- p4 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry4.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Chocolate /  Butter / Egg / Cocoa Powder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Chocolate Fudge Cookies</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- p5 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry5.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Strawberry /  Cream / Egg</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Strawberry Cake</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- p6 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/pastry6.jpg" alt="pastry">
+                                <div class="back">
+                                    <p>Milk /  Egg / Honey / Butter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Pancake</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- tea -->
+    <section class="menu_box tea_menu_box" id="tea">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6" >
+                    <div class="title_box">
+                        <h2>Tea</h2>
+                        <p>Life's Pretty Straight <br>Without Tea.  </p>
+                    </div>
+                </div>
+                <!-- t1 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea1.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Lemon / Black Tea / Syrup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Lemon Tea</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- t2 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea2.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Matcha / Milk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Matcha Latte</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- t3 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea3.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Milk / Black Tea / Syrup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Milk Tea</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- t4 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea4.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Only Lavender Tea</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Lavender Tea</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-mug-hot"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- t5 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea5.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Mint / Black Tea / Soda Water</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Mint Tea</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                                <div class="icon_box">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- t6 -->
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="image/tea6.jpg" alt="tea">
+                                <div class="back">
+                                    <p>Coffee / Black Tea / Milk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <h3>Yuenyeung</h3>
+                            <div class="data_box">
+                                <p>$5.30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="wrap">
+            <div class="item open">
+                <h2>OPENNING  HOURS</h2>
+                <div class="text_box">
+                    <p>Mon - Fri: 08:00 - 19:00</p>
+                    <p>Sat -  Sun: 09:00 - 19:00 </p>
+                </div>
+            </div>
+            <div class="item payment">
+                <h2>PAYMENT</h2>
+                <div class="icon_box">
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                    <i class="fa-brands fa-cc-jcb"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+            </div>
+            <div class="item follow">
+                <h2>FOLLOW US</h2>
+                <div class="icon_box">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=850fchcx" target="_blank"><i class="fa-brands fa-line"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+            <div class="item contact">
+                <h2>CONTACT US</h2>
+                <div class="text_box">
+                    <div class="data">
+                        <div class="icon">
+                            <i class="fa-solid fa-square-phone"></i>
+                        </div>
+                        <div class="text">
+                            <p>07-2655-5555</p>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="icon">
+                            <a href="http://gmail.com" target="_blank">
+                                <i class="fa-solid fa-envelope" id="envelope"></i>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="http://gmail.com" target="_blank">
+                                <p>5fcoffee@gmail.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="icon">
+                            <a href="https://www.google.com/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E4%B8%AD%E5%A3%A2%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@24.9576355,121.2250227,17z/data=!3m2!4b1!5s0x346822362ddd3fd1:0xeaaa90d60c8021e8!4m5!3m4!1s0x346823ea50c732a5:0x1b5e6ee66e9fec49!8m2!3d24.9576355!4d121.2250227" target="_blank">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="https://www.google.com/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E4%B8%AD%E5%A3%A2%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@24.9576355,121.2250227,17z/data=!3m2!4b1!5s0x346822362ddd3fd1:0xeaaa90d60c8021e8!4m5!3m4!1s0x346823ea50c732a5:0x1b5e6ee66e9fec49!8m2!3d24.9576355!4d121.2250227" target="_blank">
+                                <p>1F., No. 0, Jingye Rd., Xiaogang Dist., Kaohsiung City</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy2022 5F Coffee. All Rights Reserved.</p>
+            <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
+        </div>
+    </footer>
+    <!-- <script src="js/all.js"></script> -->
+    <script src="js/menu.js"></script>
+    
+</body>
+</html>

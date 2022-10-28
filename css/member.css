@@ -1,0 +1,193 @@
+.member_banner {
+  background-color: #13334E;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+.member_banner .text_box {
+  width: 100%;
+  padding-bottom: 20px;
+  transform: translateX(-100%);
+  transition: 2.5s;
+  opacity: 0;
+}
+.member_banner .text_box.active {
+  transform: translateX(0%);
+  transition: 2.5s;
+  opacity: 1;
+}
+.member_banner .nav_box {
+  width: 100%;
+  display: inline-block;
+}
+.member_banner .nav_box span {
+  width: 100px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+.member_banner .nav_box #Indicitor {
+  border: none;
+  height: 3px;
+  background-color: #E77710;
+  width: 100px;
+  margin-left: 0;
+  margin-top: 8px;
+  transform: translateX(155px);
+  transition: transform 0.5s;
+}
+.member_banner .form_box {
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.062745098) 0 0 20px 0px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 10%;
+}
+.member_banner .form_box form {
+  position: absolute;
+  top: 130px;
+  max-width: 300px;
+  padding: 0 20px;
+  transition: transform 0.5s;
+}
+.member_banner .form_box form input {
+  margin: 10px 0;
+  padding: 10px 6px;
+  border: 1px solid #333;
+  font-size: 16px;
+  width: 80%;
+  outline: none;
+}
+.member_banner .form_box form input:focus {
+  border: 2px solid #333;
+}
+.member_banner .form_box form input::-moz-placeholder {
+  font-size: 14px;
+}
+.member_banner .form_box form input:-ms-input-placeholder {
+  font-size: 14px;
+}
+.member_banner .form_box form input::placeholder {
+  font-size: 14px;
+}
+.member_banner .form_box form a {
+  color: #E77710;
+  font-size: 12px;
+  transition: 0.5s;
+  display: inline-block;
+}
+.member_banner .form_box form a:hover {
+  color: #E77710;
+  transform: scale(0.9);
+}
+.member_banner .form_box form .btn {
+  background-color: #E77710;
+  width: 50%;
+  font-family: "David Libre", serif;
+  border-radius: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  margin-top: 10px;
+  display: block;
+  margin: 20px auto 5px;
+  transition: 0.5s;
+}
+.member_banner .form_box form .btn:hover {
+  background-color: #E77710;
+  color: #fff;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+.member_banner .form_box #LoginForm {
+  left: -300px;
+}
+.member_banner .form_box #RegForm {
+  left: 0;
+}
+.member_banner .imgbox {
+  position: relative;
+  transform: translateX(100%);
+  transition: 2.5s;
+  opacity: 0;
+}
+.member_banner .imgbox img {
+  width: 200px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  vertical-align: top;
+}
+.member_banner .imgbox.active {
+  transform: translateX(0%);
+  transition: 2.5s;
+  opacity: 1;
+}
+.member_banner .deco_box {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .member_banner {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .member_banner .wrap {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+  }
+  .member_banner .imgbox {
+    transform: translateX(-100%);
+    transition: 2.5s;
+    opacity: 0;
+    grid-area: 1/1/2/2;
+  }
+  .member_banner .imgbox img {
+    width: 200px;
+  }
+  .member_banner .text_box {
+    grid-area: 2/1/3/2;
+    padding-top: 0;
+  }
+  .member_banner .text_box .form_box {
+    top: 0;
+  }
+  .member_banner .deco_box {
+    grid-area: 1/2/3/3;
+    display: block;
+    position: relative;
+    transform: translateX(100%) scale(0.5);
+    transition: 2.5s;
+    opacity: 0;
+  }
+  .member_banner .deco_box img {
+    width: 100%;
+    margin: auto 0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  .member_banner .deco_box.active {
+    transform: translateX(0%);
+    transition: 2.5s;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .member_banner .wrap {
+    max-width: 1200px;
+  }
+}/*# sourceMappingURL=member.css.map */

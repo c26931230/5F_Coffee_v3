@@ -1,0 +1,295 @@
+$main1:#0A134D;
+$main2:#fff;
+$main3:#E77710;
+$main4:#F1D00A;
+$main5:#607EAA;
+$main6:#13334E;
+$main7:#f5f4f2;
+@mixin btn_2{
+    font-size: 18px;
+    color: $main3;
+    border-bottom: $main3 1px solid;
+    transition: .5s;
+    font-family: 'David Libre', serif;
+    &:hover{
+        transform: scale(0.9);
+    }
+}
+
+.faq_banner{
+    // min-height: calc(50vh - 65px);
+    background-color: $main6;
+    padding: 50px 0;
+    // display: none;
+    // position: absolute;
+    transform: translateY(-100%);
+    width: 100%;
+    // top: -100%;
+    transition: 2s;
+    overflow: hidden;
+    
+    .wrap{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    h2{
+        text-align: center;
+        color: $main4;
+        font-size: 50px;
+        font-weight: 600;
+        transform: scale(0);
+        width: 100%;
+        transition: 3s;
+    }
+
+    input{
+        width: 90%;
+        border: 1px solid $main2;
+        border-right: none;
+        color: $main2;
+    }
+    .icon_box{
+        width: 10%;
+        border: 1px solid $main2;
+        border-left: none;
+        i{
+            color: #fff;
+        }
+    }
+    
+
+}
+.search_bar{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 50%;
+    margin: 20px auto;
+    transform: translateX(-200%);
+    transition: 2.5s;
+    input{
+        width: 80%;
+        background-color: transparent;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 30px 0 0 30px;
+        outline: none;
+        border: $main2 solid 1px;
+        border-right: none;
+        &::placeholder{
+            font-family: 'David Libre', serif;
+            font-size: 16px;
+            color: #ffffff90;
+        }
+    }
+    .icon_box{
+        padding: 0px;
+        width: 20%;
+        // background-color: #fff;
+        position: relative;
+        border: 1px solid $main2;
+        border-left: none;
+        display: inline-block;
+        border-radius: 0 30px 30px 0;
+        i{
+            font-size: 20px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            color: $main2;
+            &:hover{
+                color: $main4;
+            }
+        }
+    }
+    input:focus{
+        border: 2px solid $main4;
+        border-right: none;
+    }
+    input:focus + .icon_box{
+        border: 2px solid $main4;
+        border-left: none;
+    }
+   
+}
+// 手機板
+@media screen and (max-width:767px) {
+    .faq_banner{
+        h2{
+            font-size: 30px;
+
+        }
+        .search_bar{
+            width: 80%;
+        }
+    }
+}
+
+.faq{
+    background-color: $main7;   
+    color: #333;
+    
+    .wrap{
+        width: 80%;
+        padding-top: 50px;
+        margin: 0 auto;
+        max-width: 1200px;
+        .item{
+            background-color: $main2;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            opacity: 0;
+            // transform: scale(0);
+            transition: 2.5s;
+
+            &:nth-child(8){
+                margin-bottom: 0;
+            }
+            
+            .data{
+                padding: 10px 15px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .qa_box{
+                    font-size: 30px; //Q
+                    font-weight: 600;
+                    // width: 5%;
+                    width: fit-content;
+                    padding: 10px 12px 10px 0;
+                    // border: 1px solid red;
+                    color: #aaa;
+                }
+                .text_box{
+                    flex-grow: 1;
+                    width: 0;
+                    p{
+                        font-size: 18px; //ans
+                        line-height: 150%;
+                        color: #00000090;
+                    }
+                }
+            }
+            .ans_box{
+                display: none;
+                .data{
+                    .qa_box{
+                        color: #aaa; //A
+                    }
+                }
+            }
+     
+        }
+        
+        
+        .qus{
+            .text_box{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                // width: 90%;
+                h3{
+                    width: 90%;
+                    font-size: 24px; //qus
+                    line-height: 130%;
+                    color: $main5;
+                    font-weight: 600;
+                }
+                .faq_btn{
+                    width: 5%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 40px;
+                    // border: 1px solid red;
+                    // padding: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    // align-items: center;
+                    span{
+                        // width: 32px;
+                        width: 30px;
+                        margin: 0 auto;
+                        background-color: #aaa;
+                        height: 3px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        border-radius: 5px;
+                        &:nth-child(1){
+                            transform: translate(-50%,-50%) rotate(90deg);
+                            transition: .5s;
+                        }
+                        &:nth-child(2){
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                    span.active{
+                        transform: translate(-50%,-50%) rotate(180deg);
+                        transition: .5s;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .item + p{
+            font-size: 18px;
+            text-align: center;
+            color: $main5;
+            padding: 20px 0;
+        }
+        .item + p .btn{
+           display: inline-block;
+           @include btn_2();          
+        }
+    }
+}
+
+// 手機
+@media screen and (max-width:767px) {
+    .faq{
+        .wrap{
+            width: 90%;
+            .item{
+                .data{
+                    .qa_box{
+                        font-size: 20px; //QA
+                        // color: rebeccapurple;
+                    }
+                    .text_box{
+                        h3{
+                            font-size: 18px; //qus
+                        }
+                       
+                        .faq_btn{
+                            span{
+                                width: 20px;
+                                height: 2px;
+                            }
+                        }
+                    }
+                    
+                }
+                .ans_box{
+                    .text_box{
+                        p{
+                            font-size: 16px;  //ans
+                        }
+                    }
+                }
+            }
+            .item + p{
+                font-size: 14px;
+                line-height: 130%;
+            }
+            .item + p .btn{
+                font-size: 14px;
+                line-height: 130%;
+            }  
+        }
+        
+    }   
+}

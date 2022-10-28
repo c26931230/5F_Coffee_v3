@@ -1,0 +1,747 @@
+$main1:#0A134D;
+$main2:#fff;
+$main3:#E77710;
+$main4:#F1D00A;
+$main5:#607EAA;
+$main6:#13334E;
+$main7:#f5f4f2;
+@mixin fadeout {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 2.5s;
+}
+@mixin fadein {
+    opacity: 1;
+    transform: scale(1);
+    transition: 2.5s;
+}
+
+//-----手機 banner-----
+.course_banner{
+    width: 100%;
+    overflow: hidden;
+    .txt_box{
+        background-color: $main6;
+        width: 80%;
+        padding: 50px 50px 70px 50px;
+        transform: translateX(-100%);
+        transition: 2.5s;
+        opacity: 0;
+        h2{
+            color: $main4;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 120%;
+        }
+        p{
+            // color: $main2;
+            line-height: 150%;
+            font-size: 14px;
+            color: #ffffff90;
+        }
+    }
+    .txt_box.active{
+        transform: translateX(0%);
+        transition: 2.5s;
+        opacity: 1;
+    }
+    .img_box{
+        width: 70%;
+        margin-left: auto;
+        transform: translateY(-20%) translateX(100%);
+        // transform: translateX(-100%);
+        transition: 2.5s;
+        opacity: 0;
+        img{
+            width: 100%;
+            vertical-align: top;
+            opacity: 1;
+        }
+    }
+    .img_box.active{
+        transform: translateY(-20%) translateX(0%);
+        opacity: 1;
+    }
+}
+
+// ----- 小手機 banner -----
+@media screen and (max-width:350px) {
+    .course_banner{
+        .txt_box{
+            background-color: $main6;
+            width: 80%;
+            padding: 20px;
+            h2{
+                font-size: 24px;
+            }
+        }    
+    }
+}
+// ----- 平板以上 banner -----
+@media screen and (min-width:768px) {
+    .course_banner{
+        position: relative;
+        margin-bottom: 50px;
+        // max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        // border: 1px solid red;
+        .txt_box{
+            background-color: $main6;
+            width: 50%;
+            padding: 50px 80px 50px 50px;
+            z-index: 5;
+            position: absolute;
+            transform: translateY(-50%) translateX(-100%);
+            top: 50%;
+            h2{
+                font-size: 40px;
+            }
+
+        }
+        .txt_box.active{
+            transform: translateY(-50%) translateX(0%);
+        }
+        .img_box{
+            width: 70%;
+            margin-left: auto;
+            transform: translateY(0%) translateX(100%);
+            img{
+                width: 100%;
+                vertical-align: top;
+                // opacity: .8;
+            }
+        }
+        .img_box.active{
+            transform: translateY(0%) translateX(0%);
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .course_banner{
+        // width: 100%;
+        max-width: 1200px;
+    }
+}
+// -----手機 benfit-----
+.benfit{
+    @include fadeout();
+    h3{
+        color: $main5;
+        font-weight: 600;
+        font-size: 30px;
+        width: 80%;
+        // border: 1px solid red;
+        // margin-bottom: 50px;
+        padding: 30px 20px;
+    }
+    .container{
+        .item{
+            display: flex;
+            align-items: start;
+            flex-wrap: wrap;
+            // border: 1px solid red;
+            margin-bottom: 20px;
+            .icon_box{
+                width: 15%;
+                // border: 1px solid red;
+                text-align: center;
+                i{
+                    // font-size: 50px;
+                    color: #33333390;
+                    
+                }
+                .fa-award{
+                    font-size: 45px;
+                }
+                .fa-house-chimney{
+                    font-size: 35px;
+                }
+                .fa-circle-check{
+                    font-size: 35px;
+                }
+            }
+            .txt_box{
+                width: 85%;
+                padding: 0 10px 0 5px;
+                // border: 1px solid red;
+                h4{
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #333;
+                }
+                p{
+                    font-size: 14px;
+                    color: #00000090;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+}
+.benfit.active{
+    @include fadein();
+}
+//----- 平板以上 benfit-----
+@media screen and (min-width:768px) {
+    .benfit{
+        max-width: 1200px;
+        margin: 0 auto;
+        h3{
+            padding: 50px 100px;
+        }
+        .container{
+            .item{
+                .icon_box{
+                    width: 20%;
+                }
+                .txt_box{
+                    width: 80%;
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//  -----手機best_experience -----
+.best_experience{
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include fadeout();
+
+    .wrap{
+        .item:nth-child(1){ //title
+            h3{
+                color: $main5;
+                font-weight: 600;
+                margin-bottom: 10px;
+                font-size: 30px;
+                padding: 30px 0;
+                // width: 80%;
+                text-align: center;
+                // margin-left: auto;
+                // text-align: right;
+            }
+            p{
+                font-size: 14px;
+                color: #00000090;
+                padding: 0 20px;
+                line-height: 130%;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .item:nth-child(2){ //info
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            .data{
+                width: 33%;
+                
+                p:nth-child(1){ //number
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    color: #333;
+                }
+                p:nth-child(2){
+                    font-size: 14px; //text
+                    text-align: center;
+                    color: #00000090;
+                }
+            }
+        }
+        .item:nth-child(3){ //img
+            // width: 90%;
+            padding: 0 20px;
+            // margin: 0 auto;
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+        .item:nth-child(4){ //btn
+            text-align: center;
+            a{
+            color: $main2;
+            background-color: $main3;
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: .5s;
+            // margin: 0 auto;
+            &:hover{
+                transform: scale(0.9);
+            }
+            }
+           
+        }
+        
+    }
+}
+.best_experience.active{
+    @include fadein();
+}
+// -----平板以上 best_experience-----
+@media screen and (min-width:768px) {
+    .best_experience{
+        // padding-top: 10px;
+        margin-top: 60px;
+        .wrap{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto;
+            // align-items: center;
+            // .item{
+            //     // border: 1px solid red;
+            // }
+            .item:nth-child(1){ //title
+                grid-area: 1/2/2/3;
+                // border: 1px solid red;
+                padding-left: 20px;
+                h3{
+                    padding: 0;
+                    margin-bottom: 30px;
+                    text-align: left;
+    
+                }
+                p{
+                    font-size: 16px;
+                    padding: 0;
+                    // border: 1px solid red;
+                    margin: 0;
+                }
+            }
+            .item:nth-child(2){ //info
+                grid-area: 2/2/3/3;
+                margin:20px  0;
+                
+                text-align: left;
+                // border: 1px solid red;
+                padding-left: 20px;
+                .data{
+                    p:nth-child(1){ //number
+                        font-size: 40px;
+                        // border: 1px solid red;
+                        text-align: left;
+                    }
+                    p:nth-child(2){
+                        font-size: 16px; //text
+                        text-align: left;
+                    }
+                }
+            }
+            .item:nth-child(3){ //img
+                grid-area: 1/1/4/2;
+                // padding: 0 20px;
+                padding: 0;
+                // margin: 0 auto;
+                // margin-bottom: 30px;
+                margin: 0;
+                position: relative;
+                transform: translateY(-10%);
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                }
+            }
+            .item:nth-child(4){ //btn
+                grid-area: 3/2/4/3;
+                text-align: left;
+                padding-left: 20px;
+                margin-top: 20px;
+                a{
+                font-size: 18px;
+                }
+               
+            }
+            
+        }
+    }
+    
+}
+// // -----手機feedback-----
+section.feedback{
+    padding: 50px 0;
+    @include fadeout();
+    h3{
+        font-size: 30px;
+        color: $main5;
+        font-weight: 600;
+        // padding: 50px 100px;
+        text-align: center;
+        margin-bottom: 10px;
+        // font-size: 30px;
+        padding: 30px;
+    }
+    .container{
+        width: 100%;
+        .item{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // background-color: #607EAA10;
+            background-color: $main7;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            // box-shadow: 2px 2px 5px #ddd;
+            transition: .5s;
+            box-shadow: 0 0 2px rgb(0 0 0 / 0.1);
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-5%);
+            }
+            .img_box{
+                width: 70px;
+                text-align: center;
+                // border: 1px solid red;
+                // flex-shrink: 0;
+                // flex-grow: 1;
+                .img_data{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    // border: 1px solid red;
+                    margin: 0 auto;
+
+                }
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                    // position: relative;
+                }
+                
+            }
+            .text_box{
+                // width: 80%;
+                width: 0;
+                flex-grow: 1;
+                .name{
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin: 20px 0;
+                    color: #333;
+                }
+                i{
+                    color: #333;
+                    font-size: 16px;
+                }
+                p{
+                    color: #00000090;
+                }
+            }
+            
+        }
+    }
+    .btn_box{
+        text-align: center;
+        color: $main3;
+        // margin-bottom: 100px;
+        margin-top: 10px;
+        // padding: 10px;
+        // border: 1px solid red;
+        
+        .btn{
+            display: inline-block;
+            // @include btn_2();
+            font-size: 14px;
+            color: $main3;
+            text-decoration: underline;
+            transition: .5s;
+            &:hover{
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+section.feedback.active{
+    @include fadein();
+}
+// 平板以上
+@media screen and (min-width:768px) {
+    section.feedback h2{
+        font-size: 50px;
+    }
+    .feedback{
+        .container{
+            .row{
+                .item{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+// .testimonials{
+//     border: 1px solid red;
+//     h3{
+//         font-size: 30px;
+//         color: $main5;
+//         font-weight: 600;
+//         text-align: center;
+//         margin-bottom: 10px;
+//         padding: 30px;
+//     }
+//     .wrap{
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//         .item{
+//             width: 90%;
+//             border-radius: 10px;
+//             // margin-bottom: 20px;
+//             margin: 0 auto 20px;
+//             // text-align: left;
+//             background: #607EAA10;
+//             padding: 25px;
+//             cursor: pointer;
+//             display: flex;
+//             justify-content: space-between;
+//             img {
+//                 height: 40px;
+//                 margin-left: 5px;
+//                 margin-right: 30px;
+//                 border-radius: 50%;
+//                 vertical-align: top;
+//             }
+//             p{
+//                 padding: 0;
+//             }
+//             p.name{
+//                 margin: 15px 0;
+//                 text-align: left;
+//                 font-size: 20px;
+//                 font-weight: 600;
+//             }
+            
+//             i{
+//                 color:#333;
+//                 font-size: 16px;
+//             }
+            
+//         }
+
+//     }
+// }
+
+
+// @media (min-width: 768px) {
+//     .testimonials{
+//         // border: 1px solid red;
+//         .wrap{
+//             width: 90%;
+//             border: 1px solid red;
+//             margin: 0 auto;
+//             justify-content: center;
+//             .item{
+//                 width: 30%;
+//             }
+    
+//         }
+//     }
+    
+// }
+
+// 手機
+// .testimonials{
+//     margin-bottom: 100px;
+//     .title_box{
+//         background-color: $main7;
+//         padding: 50px 30px 30px 30px;
+//         width: 80%;
+//         margin: 0 auto;
+//         border-radius: 5px 5px 0 0;
+     
+//         h3{
+//             color: $main5;
+//             font-size: 30px;
+//             margin-bottom: 20px;
+//             font-weight: 600;
+//             line-height: 120%;
+//         }
+//         p{
+//             // color: $main2;
+//             line-height: 150%;
+//             font-size: 14px;
+//             color: #00000090;
+//         }
+//     }
+//     .card_box{
+//         position:relative;
+//         width: 100%;
+//         margin: auto;
+//         // background-color: #bfbfef;
+//         overflow:hidden;
+//         .wrap{
+//             width:1860px;
+//             transition: 1s;
+//             display: flex;
+//             flex-wrap: wrap;
+//             transform: translateX(0);
+//             height: 320px;
+//             .item{
+//                 margin:0 5px;
+//                 width:300px;
+//                 height:300px;
+//                 background-color: $main6;
+//                 float:right;
+//                 padding: 30px;
+//                 border-radius: 15px;
+//                 p{
+//                     font-size: 14px;
+//                     color: #ffffff90;
+//                     line-height: 150%;
+//                     margin-bottom: 20px;
+//                 }
+//                 .user_box{
+//                     display: flex;
+//                     flex-wrap: wrap;
+//                     // justify-content: start;
+//                     width: 100%;
+//                     img{
+//                         width: 50px;
+//                         height: 50px;
+//                         overflow: hidden;
+//                         border-radius: 50%;
+//                         margin-right: 10px;
+//                     }
+//                     p.name{
+//                         font-size: 20px;
+//                         font-weight: 600;
+//                         height: 50px;
+//                         line-height: 50px;
+//                         color: $main4;
+//                     }
+//                 }
+               
+                
+//             }
+//         }
+//         .btn_box{
+//             border: 1px solid red;
+//             // height: 60px;
+//             width: fit-content;
+//             margin: 0 auto;
+//             i{
+//                 font-size: 40px;
+//                 color: $main3;
+//                 margin: 0 10px;
+//             }
+//         }
+//     }
+
+// }
+// // 平板以上
+// @media screen and (min-width:768px) {
+//     .testimonials{
+//         margin-bottom: 100px;
+//         border: 2px solid darkblue;
+//         // display: flex;
+//         // flex-wrap: wrap;
+//         // align-items: center;
+//         .title_box{
+//             background-color: $main7;
+//             padding: 50px 30px 100px 200px;
+//             width: 50%;
+//             // margin-left: auto;
+//             margin: 0 0 0 auto;
+//             height: 500px;
+//             // border-radius: 5px 5px 0 0;
+         
+//             h3{
+//                 color: $main5;
+//                 font-size: 30px;
+//                 margin-bottom: 20px;
+//                 font-weight: 600;
+//                 line-height: 120%;
+//             }
+//             p{
+//                 // color: $main2;
+//                 line-height: 150%;
+//                 font-size: 14px;
+//                 color: #00000090;
+//             }
+//         }
+//         .card_box{
+//             // position:relative;
+//             width: 70%;
+//             // margin-right: auto;
+//             margin: 0;
+//             transform: translate(-50%,-50%);
+//             top: 0%;
+//             left: -70%;
+//             // background-color: #bfbfef;
+//             overflow:visible;
+//             .wrap{
+//                 width:1860px;
+//                 transition: 1s;
+//                 display: flex;
+//                 flex-wrap: wrap;
+//                 transform: translateX(0);
+//                 height: 320px;
+//                 .item{
+//                     margin:0 5px;
+//                     width:300px;
+//                     height:300px;
+//                     background-color: $main6;
+//                     float:right;
+//                     padding: 30px;
+//                     border-radius: 15px;
+//                     p{
+//                         font-size: 14px;
+//                         color: #ffffff90;
+//                         line-height: 150%;
+//                         margin-bottom: 20px;
+//                     }
+//                     .user_box{
+//                         display: flex;
+//                         flex-wrap: wrap;
+//                         // justify-content: start;
+//                         width: 100%;
+//                         img{
+//                             width: 50px;
+//                             height: 50px;
+//                             overflow: hidden;
+//                             border-radius: 50%;
+//                             margin-right: 10px;
+//                         }
+//                         p.name{
+//                             font-size: 20px;
+//                             font-weight: 600;
+//                             height: 50px;
+//                             line-height: 50px;
+//                             color: $main4;
+//                         }
+//                     }
+                   
+                    
+//                 }
+//             }
+//             .btn_box{
+//                 border: 1px solid red;
+//                 // height: 60px;
+//                 width: fit-content;
+//                 margin: 0 auto;
+//                 i{
+//                     font-size: 40px;
+//                     color: $main3;
+//                     margin: 0 10px;
+//                 }
+//             }
+//         }
+    
+//     }
+// }

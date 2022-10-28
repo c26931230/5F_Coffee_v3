@@ -1,0 +1,333 @@
+$main1:#0A134D;
+$main2:#fff;
+$main3:#E77710;
+$main4:#F1D00A;
+$main5:#607EAA;
+$main6:#13334E;
+$main7:#f5f4f2;
+@mixin fadeout {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 2.5s;
+}
+@mixin fadein {
+    opacity: 1;
+    transform: scale(1);
+    transition: 2.5s;
+}
+@mixin ltr {
+    transform: translateX(-100%);
+    transition: 2.5s;
+    opacity: 0;
+}
+@mixin rl_active {
+    transform: translateX(0%);
+    transition: 2.5s;
+    opacity: 1;
+}
+@mixin rtl {
+    transform: translateX(100%);
+    transition: 2.5s;
+}
+//  ----banner----
+.banner{
+    width: 100%;
+    background-image: url(../image/latte_art.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    // @include fadeout();
+    opacity: 0;
+    transition: 2.5s;
+    // height: ;
+    min-height: calc(100vh - 65px);
+
+    // margin-top: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    img{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 30%;
+        // border: 1px red solid;
+        
+    }
+}
+.banner.active{
+    // @include fadein();
+    opacity: 1;
+    transition: 2.5s;
+}
+.sale_box{
+    margin-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+    .txt_box{
+        padding: 50px 20px;
+        @include ltr();
+        h2{
+            color: $main5;
+            font-weight: 600;
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        p{
+            color: #00000090;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    .txt_box.active{
+        @include rl_active();
+    }
+    .info_box{
+        background-color: $main6;
+        padding: 30px 50px;
+        @include rtl();
+        h3{
+            color: $main4;
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            color: $main2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn{
+            display: block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background-color: $main3;
+            color: $main2;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            transition: 0.5;
+            font-size: 18px;
+            &:hover{
+                transform: scale(0.9);
+            }
+        }
+        
+    }
+    .info_box.active{
+        @include rl_active();
+    }
+}
+
+ @media screen and (min-width:768px) {
+    .sale_box{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        // border: 1px red solid;
+        margin-top: 50px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .txt_box{
+            padding: 50px 20px;
+            width: 45%;
+            h2{
+                color: $main5;
+                font-weight: 600;
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+            p{
+                color: #00000090;
+                font-size: 14px;
+            }
+        }
+        .info_box{
+            background-color: $main6;
+            padding: 30px 50px;
+            width: 45%; 
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            h3{
+                color: $main4;
+                font-weight: 600;
+                font-size: 30px;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                color: $main2;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            .btn{
+                display: block;
+                padding: 10px 25px;
+                border-radius: 30px;
+                background-color: $main3;
+                color: $main2;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: fit-content;
+                transition: 1s;
+                &:hover{
+                    transform: scale(0.9);
+                }
+            }
+            
+        }
+    }
+ }
+
+
+
+// ----skill----
+.skill_box{
+    margin-bottom: 50px;
+    .txt_box{
+        position: relative;
+        margin-bottom: 50px;
+        @include fadeout();
+        h3{
+            color: $main5;
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        p{
+            color: #00000090;
+            font-size: 14px;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 10px;
+        }
+    }
+    .txt_box.active{
+        @include fadein();
+    }
+    .img_box{
+        display: flex;
+        flex-wrap: wrap;
+        // border: 1px red solid;
+        padding: 0;
+        @include fadeout();
+        .item{
+            width: 50%;
+            padding: 10px;
+            // border: 1px red solid;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                // border: 1px red solid;
+                vertical-align: top;
+                // margin-bottom: 50px;
+                // border: 1px red solid;
+                padding: 0;
+            }
+            h4{
+                font-size: 16px;
+                color: #333;
+                font-weight: 600;
+                // border: 1px red solid;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+    .img_box.active{
+        @include fadein();
+    }
+}
+// skill平板
+ @media screen and (min-width:768px) {
+    .skill_box{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: stretch;
+        .txt_box{
+            // padding: 50px;
+            width: 50%;
+            position: relative;
+            // border: 1px red solid;
+            // order: -1;
+            margin-bottom: 0;
+            padding: 50px 0 50px 50px;
+            h3{
+                color: $main5;
+                font-weight: 600;
+                font-size: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            p{
+                color: #00000090;
+                font-size: 14px;
+                text-align: center;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .img_box{
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            // border: 1px green solid;
+            // padding: 50px;
+            padding: 50px 50px 50px 0;
+            order: -1;
+            .item{
+                width: 50%;
+                padding: 10px;
+                // background-color: #607EAA;
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                    margin-bottom: 5px;
+                    // width: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                h4{
+                    font-size: 16px;
+                    color: #333;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+ }
+
+  @media screen and (min-width:1920px) {
+        .sale_box{
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .skill_box{
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  }

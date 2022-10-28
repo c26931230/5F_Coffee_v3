@@ -1,0 +1,108 @@
+.main_course {
+  background-color: #f5f4f2;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 2.5s;
+}
+.main_course h3 {
+  color: #607EAA;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 35px 0;
+}
+.main_course .container {
+  width: 100%;
+}
+.main_course .container .row .item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.main_course .container .row .item .sale {
+  position: absolute;
+  top: 14px;
+  right: -30px;
+  transform: rotate(45deg);
+  padding: 10px 25px;
+  background-color: #607EAA;
+}
+.main_course .container .row .item .sale p {
+  color: #fff;
+  font-size: 12px;
+}
+.main_course .container .row .item .img_box {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.main_course .container .row .item .img_box img {
+  width: 80%;
+  vertical-align: top;
+}
+.main_course .container .row .item .txt_box {
+  padding: 5px 10px;
+}
+.main_course .container .row .item .txt_box h4 {
+  font-size: 20px;
+  color: #607EAA;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.main_course .container .row .item .txt_box h4 + p {
+  color: rgba(0, 0, 0, 0.3137254902);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.main_course .container .row .item .txt_box .icon_box {
+  margin-bottom: 5px;
+}
+.main_course .container .row .item .txt_box .icon_box i {
+  color: #333;
+  font-size: 12px;
+}
+.main_course .container .row .item .txt_box p.date {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.main_course .container .row .item .txt_box p.price {
+  font-size: 18px;
+  color: #f00;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.main_course .container .row .item .txt_box p.price span {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #333;
+}
+.main_course .container .row .item:hover {
+  transform: translateY(-10%);
+}
+
+.main_course.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: 2.5s;
+}
+
+@media screen and (max-width: 767px) {
+  .main_course {
+    background-color: #f5f4f2;
+  }
+  .main_course .container {
+    width: 100%;
+  }
+  .main_course .container .row .item {
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=course.css.map */

@@ -1,0 +1,130 @@
+$main1:#0A134D;
+$main2:#fff;
+$main3:#E77710;
+$main4:#F1D00A;
+$main5:#607EAA;
+$main6:#13334E;
+$main7:#f5f4f2;
+@mixin fadeout {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 2.5s;
+}
+@mixin fadein {
+    opacity: 1;
+    transform: scale(1);
+    transition: 2.5s;
+}
+.main_course{
+    background-color: $main7;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    @include fadeout();
+    h3{
+        color: $main5;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 35px 0;
+    }
+    .container{
+        width: 100%;
+        .row{
+            .item{
+                position: relative;
+                background-color: $main2;
+                border-radius: 5px;
+                overflow: hidden;
+                display: inline-block;
+                margin-bottom: 30px;
+                box-shadow: 0 0 15px rgba(0,0,0,.1);
+                .sale{
+                    position: absolute;
+                    top: 14px;
+                    right: -30px;
+                    transform: rotate(45deg);
+                    padding: 10px 25px;
+                    background-color: $main5;
+
+                    p{
+                        color: $main2;
+                        font-size: 12px;
+                    }
+                    
+                }
+                .img_box{
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+                    img{
+                        width: 80%;
+                        vertical-align: top;
+                    }
+                }
+                .txt_box{
+                    padding: 5px 10px;
+                    h4{
+                        font-size: 20px;
+                        color: $main5;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    h4+p{ //level
+                        color: #00000050;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+                    .icon_box{
+                        margin-bottom: 5px;
+                        i{
+                            color: #333;
+                            font-size: 12px;
+                        }
+                        
+                    }
+                    p.date{
+                        color: #333;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                    }
+                    p.price{
+                        font-size: 18px;
+                        color: #f00;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        span{
+                            font-size: 12px;
+                            text-decoration: line-through;
+                            color: #333;
+                        }
+                    }
+                }
+                transition: 1s;
+            }
+            .item:hover{
+                transform: translateY(-10%);
+            }
+        }
+    }
+}
+.main_course.active{
+    @include fadein();
+}
+// 手機
+@media screen and (max-width:767px) {
+    .main_course{
+        background-color: $main7;
+        // padding: 60px 0;
+        .container{
+            width: 100%;
+            .row{
+                .item{
+                    margin-bottom: 20px;
+                  
+                }
+            }
+        }
+    }
+}
+

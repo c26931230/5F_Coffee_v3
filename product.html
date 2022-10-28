@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5F coffee | Products</title>
+   
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid_system.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- font David Libre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <!-- ico -->
+    <script src="https://kit.fontawesome.com/cdbf7190c7.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="logo.ico">
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <input type="checkbox" id="switch">
+    <header class="header">
+        <div class="wrap">
+            <!-- bar -->
+            <label class="hb" for="switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="logo_box">
+                <a href="index.html"><img src="image/5flogo.png" alt="5F Coffee"></a>
+            </div>
+            <!-- nav -->
+            <nav class="nav">
+                <ul class="nav_links">
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li class="tab"><a href="product.html">Products</a></li>
+                    <li><a href="faq.html" class="faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <!-- function -->
+            <div class="function_box">
+                <a href="member.html"><i class="fa-solid fa-user"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+     <!--all product -->
+     <section class="main_area">
+        <div class="title">
+            <h2>All Proucts</h2>
+            <p>Whatever you’ve got in mind, we’ve got inside.</p>
+        </div>
+        <div class="wrap fadein">
+            <aside class="aside" id="product_aside">
+                <form action="">
+                    <h3>Product</h3>
+                    <div class="search_bar">
+                         <input type="text" placeholder="Search">
+                         <a href="#" class="icon_box"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+               
+                    <div class="catlog">
+                        <!-- coffee machine -->
+                        <div class="item">
+                            <input type="checkbox" id="machine">
+                            <label for="machine">Coffee Machine</label>
+                        </div>
+                        <!-- coffee beans -->
+                        <div class="item">
+                            <input type="checkbox" id="bean">
+                            <label for="bean">Coffee Beans</label>
+                        </div>
+                        <!-- coffee drippers -->
+                        <div class="item">
+                            <input type="checkbox" id="dripper">
+                            <label for="dripper">Coffee Dripper</label>
+                        </div>
+                        <!-- milk pitchers -->
+                        <div class="item">
+                            <input type="checkbox" id="pitchers">
+                            <label for="pitchers">Milk Pitchers</label>
+                        </div>
+                        <!-- water kettles -->
+                        <div class="item">
+                            <input type="checkbox" id="kettle">
+                            <label for="kettle">Water Kettles</label>
+                        </div>
+                        <!-- coffee grinder -->
+                        <div class="item">
+                            <input type="checkbox" id="grinder">
+                            <label for="grinder">Coffee Grinder</label>
+                        </div>
+                    </div>
+                    <!-- price slider -->
+                    <div class="price_bar">
+                        <h3>Price</h3>
+                        <div class="price-input">
+                            <div class="field">
+                                <input type="number" class="input-min" value="0">
+                            </div>
+                            <div class="field">
+                                <input type="number" class="input-max" value="2000">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="2000" value="0" step="1">
+                            <input type="range" class="range-max" min="0" max="2000" value="2000" step="1">
+                        </div>
+                        <div class="price_detail">
+                            <span id="min_price">$0</span>
+                            <span id="max_price">$2000</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="filter_btn_box">
+                        <button id="filter_confirm">Confirm</button>
+                        <a id="filter_cancel">Cancel</a>
+                    </div>
+                </form>
+                
+
+            </aside>
+            <main class="main">
+                <div class="data">
+                    <div class="filter_box" id="product_filter">
+                        <i class="fa-solid fa-filter"></i>
+                        <p>Filier</p>
+                    </div>
+                    <p>515 Products</p>
+                    <select id="match_box">
+                        <option value="0">Best Match</option>
+                        <option value="1">Price: Low to High</option>
+                        <option value="2">Price: High to Low</option>
+                        <option value="3">Most recent</option>
+                        <option value="4">Most Popular</option>
+                    </select>
+                </div>
+                <div class="product_area">
+                    <div class="container">
+                        <div class="row">
+                            <!-- pd1 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/kettle1.jpg" alt="water kettle">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Water Kettles</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd2 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/kettle2.jpg" alt="water kettle">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Water Kettles</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                             <!-- pd3 -->
+                             <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/kettle3.jpg" alt="water kettle">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Water Kettles</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd4 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/machine1.jpg" alt="coffee machine">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Machine</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd5 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/machine2.jpg" alt="coffee machine">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Machine</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd6 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/pitcher1.jpg" alt="Milk Pitcher">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Milk Pitcher</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd7 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/pitcher2.jpg" alt="milk pitcher">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Milk Pitcher</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- pd8 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/grinder1.jpg" alt="coffee grinder">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Grinder</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd9 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/grinder2.jpg" alt="coffee grinder">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Grinder</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd10 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/dripper1.jpg" alt="coffee driper">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Driper</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd11 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/dripper2.jpg" alt="coffee driper">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Driper</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- pd12 -->
+                            <div class="col-6 col-lg-4 ">
+                                <a href="product_detail.html">
+                                    <div class="item">
+                                        <div class="img_box">
+                                            <img src="image/dripper3.jpg" alt="coffee driper">
+                                        </div>
+                                        <div class="text_box">
+                                            <h3>Coffee Driper</h3>
+                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <p>$159.00</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <ul class="page_num">
+                    <li><a href="#">&lt;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
+            </main>
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="wrap">
+            <div class="item open">
+                <h2>OPENNING  HOURS</h2>
+                <div class="text_box">
+                    <!-- <h2>OPENNING  HOURS</h2> -->
+                    <p>Mon - Fri: 08:00 - 19:00</p>
+                    <p>Sat -  Sun: 09:00 - 19:00 </p>
+                </div>
+            </div>
+            <div class="item payment">
+                <h2>PAYMENT</h2>
+                <div class="icon_box">
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                    <i class="fa-brands fa-cc-jcb"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+            </div>
+            <div class="item follow">
+                <h2>FOLLOW US</h2>
+                <div class="icon_box">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=850fchcx" target="_blank"><i class="fa-brands fa-line"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+            <div class="item contact">
+                <h2>CONTACT US</h2>
+                <div class="text_box">
+                    <div class="data">
+                        <div class="icon">
+                            <i class="fa-solid fa-square-phone"></i>
+                        </div>
+                        <div class="text">
+                            <p>07-2655-5555</p>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="icon">
+                            <a href="http://gmail.com" target="_blank">
+                                <i class="fa-solid fa-envelope" id="envelope"></i>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="http://gmail.com" target="_blank">
+                                <p>5fcoffee@gmail.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="icon">
+                            <a href="https://www.google.com/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E4%B8%AD%E5%A3%A2%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@24.9576355,121.2250227,17z/data=!3m2!4b1!5s0x346822362ddd3fd1:0xeaaa90d60c8021e8!4m5!3m4!1s0x346823ea50c732a5:0x1b5e6ee66e9fec49!8m2!3d24.9576355!4d121.2250227" target="_blank">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="https://www.google.com/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E4%B8%AD%E5%A3%A2%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@24.9576355,121.2250227,17z/data=!3m2!4b1!5s0x346822362ddd3fd1:0xeaaa90d60c8021e8!4m5!3m4!1s0x346823ea50c732a5:0x1b5e6ee66e9fec49!8m2!3d24.9576355!4d121.2250227" target="_blank">
+                                <p>1F., No. 0, Jingye Rd., Xiaogang Dist., Kaohsiung City</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy2022 5F Coffee. All Rights Reserved.</p>
+            <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
+        </div>
+    </footer>
+
+    <script src="js/product.js"></script>
+</body>
+</html>

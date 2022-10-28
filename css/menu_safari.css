@@ -1,0 +1,261 @@
+.menu_slogan {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: #333;
+}
+
+.menu_bar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0;
+}
+.menu_bar .container {
+  width: 80%;
+  margin: auto;
+}
+.menu_bar .item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.menu_bar .item .layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+}
+.menu_bar .item .layer:hover {
+  background: rgba(19, 51, 78, 0.5647058824);
+}
+.menu_bar .item:hover h2 {
+  bottom: 50%;
+}
+.menu_bar .item img {
+  width: 100%;
+  vertical-align: top;
+}
+.menu_bar .item h2 {
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  bottom: 5px;
+  text-shadow: 2px 2px 5px #333;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  transform: translate(-50%);
+  left: 50%;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+  .menu_bar p {
+    font-size: 16px;
+  }
+  .menu_bar .item {
+    margin-bottom: 20px;
+  }
+  .menu_bar .coffee_btn {
+    order: -1;
+  }
+}
+.coffee_menu_box, .tea_menu_box {
+  background-color: #f5f4f2;
+}
+
+.coffee_menu_box, .pastry_menu_box, .tea_menu_box {
+  margin-bottom: 100px;
+  padding: 50px 0;
+}
+.coffee_menu_box .container, .pastry_menu_box .container, .tea_menu_box .container {
+  width: 80%;
+}
+.coffee_menu_box .title_box, .pastry_menu_box .title_box, .tea_menu_box .title_box {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.coffee_menu_box .title_box::after, .pastry_menu_box .title_box::after, .tea_menu_box .title_box::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(241, 208, 10, 0.1882352941);
+  border-radius: 51% 49% 63% 37%/46% 30% 70% 54%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 30%;
+}
+.coffee_menu_box .title_box h2, .pastry_menu_box .title_box h2, .tea_menu_box .title_box h2 {
+  font-size: 80px;
+  color: #607EAA;
+  margin-bottom: 10px;
+  z-index: 2;
+  font-weight: 600;
+}
+.coffee_menu_box .title_box p, .pastry_menu_box .title_box p, .tea_menu_box .title_box p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3137254902);
+  z-index: 2;
+}
+.coffee_menu_box .item, .pastry_menu_box .item, .tea_menu_box .item {
+  perspective: 1000px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px #ddd;
+  margin: 20px 0;
+}
+.coffee_menu_box .item .front, .pastry_menu_box .item .front, .tea_menu_box .item .front {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 2s;
+}
+.coffee_menu_box .item .front .back, .pastry_menu_box .item .front .back, .tea_menu_box .item .front .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13334E;
+  color: #fff;
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.coffee_menu_box .item .front .back p, .pastry_menu_box .item .front .back p, .tea_menu_box .item .front .back p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  line-height: 120%;
+  text-align: center;
+}
+.coffee_menu_box .item .front.rotate, .pastry_menu_box .item .front.rotate, .tea_menu_box .item .front.rotate {
+  transform: rotateY(180deg);
+}
+.coffee_menu_box .item img, .pastry_menu_box .item img, .tea_menu_box .item img {
+  width: 100%;
+  vertical-align: top;
+}
+.coffee_menu_box .text_box h3, .pastry_menu_box .text_box h3, .tea_menu_box .text_box h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 10px 5px;
+}
+.coffee_menu_box .text_box .data_box, .pastry_menu_box .text_box .data_box, .tea_menu_box .text_box .data_box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.coffee_menu_box .text_box .data_box p, .pastry_menu_box .text_box .data_box p, .tea_menu_box .text_box .data_box p {
+  display: inline-block;
+  color: #333;
+}
+.coffee_menu_box .text_box .data_box i, .pastry_menu_box .text_box .data_box i, .tea_menu_box .text_box .data_box i {
+  font-weight: 900;
+}
+.coffee_menu_box .text_box .data_box .fa-mug-hot, .pastry_menu_box .text_box .data_box .fa-mug-hot, .tea_menu_box .text_box .data_box .fa-mug-hot {
+  color: red;
+}
+.coffee_menu_box .text_box .data_box .fa-snowflake, .pastry_menu_box .text_box .data_box .fa-snowflake, .tea_menu_box .text_box .data_box .fa-snowflake {
+  color: #607EAA;
+}
+
+.pastry_menu_box .title_box::after {
+  left: 50%;
+  top: 30%;
+  transform: scaleX(-1);
+}
+
+.tea_menu_box {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .coffee_menu_box, .pastry_menu_box, .tea_menu_box {
+    margin-bottom: 0;
+  }
+  .coffee_menu_box .title_box h2, .pastry_menu_box .title_box h2, .tea_menu_box .title_box h2 {
+    font-size: 50px;
+  }
+  .coffee_menu_box .title_box p, .pastry_menu_box .title_box p, .tea_menu_box .title_box p {
+    font-size: 16px;
+  }
+  .coffee_menu_box .title_box::after, .pastry_menu_box .title_box::after, .tea_menu_box .title_box::after {
+    width: 100px;
+    height: 100px;
+  }
+  .coffee_menu_box .item h3, .pastry_menu_box .item h3, .tea_menu_box .item h3 {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .coffee_menu_box .item .data_box, .pastry_menu_box .item .data_box, .tea_menu_box .item .data_box {
+    padding: 5px 8px;
+  }
+  .coffee_menu_box .item p, .pastry_menu_box .item p, .tea_menu_box .item p {
+    font-size: 14px;
+  }
+  .coffee_menu_box .item i, .pastry_menu_box .item i, .tea_menu_box .item i {
+    font-size: 14px;
+  }
+  .pastry_menu_box .pastry_title {
+    order: -1;
+  }
+  .pastry_menu_box .pastry_title ::after {
+    top: 20%;
+  }
+}
+/* #switch_menu */
+#switch_menu {
+  background-color: #fff;
+  border: 2px solid #607EAA;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  color: #41403e;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  position: fixed;
+  bottom: 20px;
+  right: -100%;
+  z-index: 10;
+  font-family: "David Libre", serif;
+  font-weight: 600;
+  opacity: 0;
+  transition: 1s;
+}
+
+#switch_menu.active {
+  opacity: 1;
+  right: 20px;
+}
+
+#switch_menu:hover {
+  transform: translate3d(0, 10px, 0);
+}/*# sourceMappingURL=menu_safari.css.map */
