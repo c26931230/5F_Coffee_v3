@@ -1,9 +1,7 @@
 .faq_banner {
   background-color: #13334E;
   padding: 50px 0;
-  transform: translateY(-100%);
   width: 100%;
-  transition: 2s;
   overflow: hidden;
 }
 .faq_banner .wrap {
@@ -15,9 +13,7 @@
   color: #F1D00A;
   font-size: 50px;
   font-weight: 600;
-  transform: scale(0);
   width: 100%;
-  transition: 3s;
 }
 .faq_banner input {
   width: 90%;
@@ -40,8 +36,6 @@
   justify-content: center;
   width: 50%;
   margin: 20px auto;
-  transform: translateX(-200%);
-  transition: 2.5s;
 }
 .search_bar input {
   width: 80%;
@@ -119,8 +113,6 @@
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 20px;
-  opacity: 0;
-  transition: 2.5s;
 }
 .faq .wrap .item:nth-child(8) {
   margin-bottom: 0;

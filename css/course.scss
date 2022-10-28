@@ -5,21 +5,11 @@ $main4:#F1D00A;
 $main5:#607EAA;
 $main6:#13334E;
 $main7:#f5f4f2;
-@mixin fadeout {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: 2.5s;
-}
-@mixin fadein {
-    opacity: 1;
-    transform: scale(1);
-    transition: 2.5s;
-}
+
 .main_course{
     background-color: $main7;
     padding-bottom: 50px;
     margin-top: 50px;
-    @include fadeout();
     h3{
         color: $main5;
         font-weight: 600;
@@ -108,9 +98,7 @@ $main7:#f5f4f2;
         }
     }
 }
-.main_course.active{
-    @include fadein();
-}
+
 // 手機
 @media screen and (max-width:767px) {
     .main_course{

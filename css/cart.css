@@ -10,9 +10,6 @@
   max-width: 1200px;
   align-items: flex-end;
   row-gap: 10px;
-  transform: translateX(-100%);
-  transition: 2.5s;
-  opacity: 0;
 }
 .shopping_cart .wrap .item {
   border-bottom: 1px solid #ddd;
@@ -91,11 +88,6 @@
 .shopping_cart .wrap .item:nth-child(7) {
   grid-area: 2/4/3/5;
 }
-.shopping_cart .wrap.active {
-  transform: translateX(0%);
-  transition: 2.5s;
-  opacity: 1;
-}
 .shopping_cart .sum {
   display: grid;
   grid-template-columns: 60% 20% 20%;
@@ -105,8 +97,6 @@
   margin: 0 auto 50px;
   font-size: 20px;
   row-gap: 10px;
-  transform: translateX(100%);
-  transition: 2.5s;
 }
 .shopping_cart .sum .item {
   padding: 10px 0;
@@ -154,11 +144,6 @@
 }
 .shopping_cart .sum .item:nth-child(7) a:hover {
   transform: scale(0.9);
-}
-.shopping_cart .sum.active {
-  transform: translateX(0%);
-  transition: 2.5s;
-  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {

@@ -2,9 +2,6 @@
   background-color: #f5f4f2;
   padding-bottom: 50px;
   margin-top: 50px;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: 2.5s;
 }
 .main_course h3 {
   color: #607EAA;
@@ -87,12 +84,6 @@
 }
 .main_course .container .row .item:hover {
   transform: translateY(-10%);
-}
-
-.main_course.active {
-  opacity: 1;
-  transform: scale(1);
-  transition: 2.5s;
 }
 
 @media screen and (max-width: 767px) {

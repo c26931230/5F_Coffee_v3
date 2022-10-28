@@ -26,27 +26,27 @@ $(document).ready(function () {
   //   -----menu clicked me button section fadin-----
   function button_appear() {
     let coffee_outerHeight = $('#coffee').outerHeight();
-    let coffee_offsetTop = $('#coffee').offset().top;
-    let pastry_outerHeight = $('#pastry').outerHeight();
-    let pastry_offsetTop = $('#pastry').offset().top;
-    let tea_OuterHeight = $('#tea').outerHeight();
-    let tea_OffsetTop = $('#tea').offset().top;
+    // let coffee_offsetTop = $('#coffee').offset().top;
+    // let pastry_outerHeight = $('#pastry').outerHeight();
+    // let pastry_offsetTop = $('#pastry').offset().top;
+    // let tea_OuterHeight = $('#tea').outerHeight();
+    // let tea_OffsetTop = $('#tea').offset().top;
     if (scrollY + innerHeight - coffee_outerHeight / 4 > coffee_offsetTop) {
       $('#switch_menu').addClass('active')
       $('#coffee').addClass('active')
     }else{
       $('#coffee').removeClass('active')
     }
-    if (scrollY + innerHeight - pastry_outerHeight / 4 > pastry_offsetTop) {
-      $('#pastry').addClass('active')
-    }else{
-      $('#pastry').removeClass('active')
-    }
-    if (scrollY + innerHeight - tea_OuterHeight / 4 > tea_OffsetTop) {
-      $('#tea').addClass('active')
-    }else{
-      $('#tea').removeClass('active')
-    }
+    // if (scrollY + innerHeight - pastry_outerHeight / 4 > pastry_offsetTop) {
+    //   $('#pastry').addClass('active')
+    // }else{
+    //   $('#pastry').removeClass('active')
+    // }
+    // if (scrollY + innerHeight - tea_OuterHeight / 4 > tea_OffsetTop) {
+    //   $('#tea').addClass('active')
+    // }else{
+    //   $('#tea').removeClass('active')
+    // }
   }
 })
 

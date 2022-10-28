@@ -1,12 +1,3 @@
-// ------product.html 動畫----
-window.onload = function(){
-    let product_title = document.querySelectorAll(".title")
-    let product_wrap = document.querySelectorAll(".fadein")
-    for(let i=0; i < product_title.length; i++){
-        product_title[i].classList.add("active");
-        product_wrap[i].classList.add("active");
-    }
-}
 // -----price slider bar-----
 const rangeInput = document.querySelectorAll(".range-input input");
 const priceInput = document.querySelectorAll(".price-input input");
@@ -61,39 +52,6 @@ rangeInput.forEach(input=>{
 })
 
 // -----filter-----
-// $(document).ready(function(){
-            
-//     $('#product_filter').click(function(){
-//         $('#product_aside').slideDown(1000)
-//         $('#product_filter').css({
-//             display:'none',
-//         })
-//         $('#match_box').css({
-//             display:'none',
-//         })
-//     })
-//     $('#filter_cancel').click(
-//         function(){
-//             $('#product_aside').slideUp(1000)
-//             $('#product_filter').css({
-//                 display:'block',
-//             })
-//             $('#match_box').css({
-//             display:'block',
-//         })
-//         }
-//     )
-//     let winWidth = $(window).width();
-//     // let 
-//     // // if(winWidth > 768 && )
-//     if(($('#product_filter').is(":hidden")) && winWidth > 768) {
-//         $("#product_aside").show();  
-//         $('#product_filter').css({
-//             display:'none',
-//         });  
-//  } 
-// })
-// -----filter2-----
 $(document).ready(function(){
             
     $('#product_filter').click(function(){
@@ -119,7 +77,6 @@ $(document).ready(function(){
 })
 
 
-// product_detail.html
 
 // -----換愛心-----
 var solid_heart = document.getElementById("solid_heart");

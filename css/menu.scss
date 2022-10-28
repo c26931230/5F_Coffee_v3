@@ -115,7 +115,6 @@ $main7:#f5f4f2;
 .coffee_menu_box, .pastry_menu_box, .tea_menu_box{
     margin-bottom: 100px;
     padding: 50px 0;
-    @include fadeout();
     .container{
         width: 80%;
     }
@@ -243,16 +242,15 @@ $main7:#f5f4f2;
 .tea_menu_box{
     margin-bottom: 0;
 }
-.coffee_menu_box.active{
-    @include fadein();
-}
-.coffee_menu_box.active, .pastry_menu_box.active, .tea_menu_box.active{
-    @include fadein();
-}
+
 
 @media screen and (max-width:767px) {
     .coffee_menu_box, .pastry_menu_box, .tea_menu_box{
         margin-bottom: 0;
+        .container{
+            width: 100%;
+            padding: 0 10px;
+        }
         .title_box{
             h2{
                 font-size: 50px;

@@ -5,23 +5,8 @@ $main4:#F1D00A;
 $main5:#607EAA;
 $main6:#13334E;
 $main7:#f5f4f2;
-@mixin ltr {
-    transform: translateX(-100%);
-    transition: 2.5s;
-    opacity: 0;
-}
-@mixin rl_active {
-    transform: translateX(0%);
-    transition: 2.5s;
-    opacity: 1;
-}
-@mixin rtl {
-    transform: translateX(100%);
-    transition: 2.5s;
-}   
 // -----shopping cart-----
 .shopping_cart{
-    // @include fadeout();
     overflow-x: hidden;
     .wrap{
         display: grid;
@@ -34,7 +19,6 @@ $main7:#f5f4f2;
         // background-color: #0A134D50;
         align-items: flex-end;
         row-gap: 10px;
-        @include ltr();
         .item{
             border-bottom: 1px solid #ddd;
             padding: 20px 0;
@@ -88,13 +72,10 @@ $main7:#f5f4f2;
             }
         }
         .item:nth-child(4n+3):not(.item:nth-child(3)){
-            // border: 1px solid red;
             p{
-                // width: 40%;
                 font-size: 18px;
                 text-align: right;
                 padding-right: 10px;
-                // border: 1px solid red;  
             }
         }
         .item:nth-child(1){
@@ -124,9 +105,6 @@ $main7:#f5f4f2;
             grid-area: 2 / 4 / 3 / 5;  
         }
     }
-    .wrap.active{
-        @include rl_active();
-    }
     .sum{
         display: grid;
         grid-template-columns: 60% 20% 20%;
@@ -136,7 +114,6 @@ $main7:#f5f4f2;
         margin: 0 auto 50px;
         font-size: 20px;
         row-gap: 10px;
-        @include rtl();
         .item{
             padding: 10px 0;
             // border: 1px solid red;
@@ -171,8 +148,6 @@ $main7:#f5f4f2;
         }
         .item:nth-child(7){
             grid-area: 4 / 2 / 5 / 4;  
-            // margin-top: 20px;
-            // border: 1px solid red;
             position: relative;
             width: 80%;
             margin: 20px auto 0;
@@ -191,9 +166,6 @@ $main7:#f5f4f2;
             }
         }
 
-    }
-    .sum.active{
-        @include rl_active();
     }
     
     

@@ -17,15 +17,9 @@ $main7:#f5f4f2;
 }
 
 .faq_banner{
-    // min-height: calc(50vh - 65px);
     background-color: $main6;
     padding: 50px 0;
-    // display: none;
-    // position: absolute;
-    transform: translateY(-100%);
     width: 100%;
-    // top: -100%;
-    transition: 2s;
     overflow: hidden;
     
     .wrap{
@@ -37,9 +31,9 @@ $main7:#f5f4f2;
         color: $main4;
         font-size: 50px;
         font-weight: 600;
-        transform: scale(0);
+        // transform: scale(0);
         width: 100%;
-        transition: 3s;
+        // transition: 3s;
     }
 
     input{
@@ -65,8 +59,6 @@ $main7:#f5f4f2;
     justify-content: center;
     width: 50%;
     margin: 20px auto;
-    transform: translateX(-200%);
-    transition: 2.5s;
     input{
         width: 80%;
         background-color: transparent;
@@ -85,7 +77,6 @@ $main7:#f5f4f2;
     .icon_box{
         padding: 0px;
         width: 20%;
-        // background-color: #fff;
         position: relative;
         border: 1px solid $main2;
         border-left: none;
@@ -139,10 +130,6 @@ $main7:#f5f4f2;
             background-color: $main2;
             border-radius: 5px;
             margin-bottom: 20px;
-            opacity: 0;
-            // transform: scale(0);
-            transition: 2.5s;
-
             &:nth-child(8){
                 margin-bottom: 0;
             }
@@ -155,10 +142,8 @@ $main7:#f5f4f2;
                 .qa_box{
                     font-size: 30px; //Q
                     font-weight: 600;
-                    // width: 5%;
                     width: fit-content;
                     padding: 10px 12px 10px 0;
-                    // border: 1px solid red;
                     color: #aaa;
                 }
                 .text_box{
@@ -189,7 +174,6 @@ $main7:#f5f4f2;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
-                // width: 90%;
                 h3{
                     width: 90%;
                     font-size: 24px; //qus
@@ -204,11 +188,8 @@ $main7:#f5f4f2;
                     flex-direction: column;
                     justify-content: center;
                     height: 40px;
-                    // border: 1px solid red;
-                    // padding: 10px;
                     position: relative;
                     cursor: pointer;
-                    // align-items: center;
                     span{
                         // width: 32px;
                         width: 30px;
