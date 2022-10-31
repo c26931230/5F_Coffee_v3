@@ -24,6 +24,9 @@
     <link rel="icon" href="logo.ico">
     <!-- jQuery -->
     <script src="js/jquery-3.6.1.min.js"></script>
+
+    <!-- vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -163,7 +166,8 @@
                                         </div>
                                         <div class="text_box">
                                             <h3>Water Kettles</h3>
-                                            <div class="icon_box"><i class="fa-solid fa-star"></i>
+                                            <div class="icon_box">
+                                                <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -401,14 +405,12 @@
                 </div>
                 <ul class="page_num">
                     <li><a href="#">&lt;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
+                    <li v-for="page in 4" :key="page"><a href="#">{{page}}</a></li>
                     <li><a href="#">&gt;</a></li>
                 </ul>
             </main>
         </div>
+       
 
     </section>
     <!-- footer -->
@@ -482,7 +484,11 @@
             <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
         </div>
     </footer>
-
+    <script>
+        // vue 頁碼
+        Vue.createApp({
+        }).mount(".page_num")
+    </script>
     <script src="js/product.js"></script>
 </body>
 </html>

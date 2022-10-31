@@ -24,7 +24,8 @@
     <link rel="icon" href="logo.ico">
     <!-- js -->
     <script src="js/jquery-3.6.1.min.js"></script>
-    <!-- <script src="js/all.js"></script> -->
+     <!-- vue3 -->
+     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -65,37 +66,17 @@
     <p class="menu_slogan">Coffee, Tea, and Conversation Since 2020.</p>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-12">
-                    <a href="#pastry">
+                <div class="col-md-4 col-12" v-for="(item,index) in product" :key="item.id">
+                    <a :href="item.href">
                         <figure class="item">
-                            <img src="image/pastry.jpg" alt="pastry">
+                            <img :src="item.image" :alt="item.title">
                             <figcaption class="layer">
-                                <h2>Pastry</h2>
+                                <h2>{{item.title}}</h2>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-4 col-12 coffee_btn">
-                    <a href="#coffee">
-                        <figure class="item">
-                            <img src="image/coffee.jpg" alt="pastry">
-                            <figcaption class="layer">
-                                <h2>Coffee</h2>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-md-4 col-12">
-                    <a href="#tea">
-                        <figure class="item">
-                            <img src="image/tea.jpg" alt="tea">
-                            <figcaption class="layer">
-                                <h2>Tea</h2>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-            </div>
+            </div> 
         </div>
    </section>
     <!-- coffee -->
@@ -108,210 +89,24 @@
                         <p>It's not just coffee,<br>it's an experience. </p>
                     </div>
                 </div>
-                <!-- c1 -->
-                <div class="col-6 col-md-3">
-                    <div class="item test">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee1.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Esprseeo/Water</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Americano</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c2 -->
-                <div class="col-6 col-md-3">
+                <!-- coffee item -->
+                <div class="col-6 col-md-3" v-for="(item,index) in product" :key="item.id">
                     <div class="item">
                         <div class="inner">
                             <div class="front">
-                                <img src="image/coffee2.jpg" alt="coffee">
+                                <img :src="item.image" :alt="item.title">
                                 <div class="back">
-                                    <p>Only Espresso</p>
+                                    <p>{{item.desq}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="text_box">
-                            <h3>Espresso</h3>
+                            <h3>{{item.title}}</h3>
                             <div class="data_box">
-                                <p>$5.30</p>
+                                <p>${{item.price}}</p>
                                 <div class="icon_box">
-                                    <i class="fa-solid fa-mug-hot"></i>
+                                    <i :class="item.icon"></i>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c3 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee3.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Made by steeping ground coffee in room-temperature water for several hours.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Cold Brew</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c4 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee4.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Milk / Foam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Hot Latte</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-mug-hot"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c5 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee5.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Milk / Foam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Ice Latte</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c6 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee6.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Chocolate / Milk / Whipped Cream</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Mocha</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c7 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee7.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Milk / Foam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Cappuccino</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c8 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee8.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Ice Cream</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Affogato</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c9 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee9.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>Espresso / Lemon / Soda Water</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Espresso Romano</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- c10 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/coffee10.jpg" alt="coffee">
-                                <div class="back">
-                                    <p>We offer all kinds of coffee beans!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Pour Over Coffee</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
                             </div>
                         </div>
                     </div>
@@ -323,122 +118,30 @@
     <section class="menu_box pastry_menu_box" id="pastry">
         <div class="container">
             <div class="row">
-                <!-- p1 -->
-                <div class="col-6 col-md-3 p1">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/pastry1.jpg" alt="pastry">
-                                <div class="back">
-                                    <p>Brownie / Ice Cream / Caramel /Wafer Roll</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Brownie</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- p2 -->
-                <div class="col-6 col-md-3 p2">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/pastry2.jpg" alt="pastry">
-                                <div class="back">
-                                    <p>Espresso / Mascarpone / Cocoa Powder / Liqueur</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Tiramisu</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-12 col-md-6 pastry_title" >
                     <div class="title_box">
                         <h2>Pastry</h2>
                         <p>Life is short,<br>eat dessert first.</p>
                     </div>
                 </div>
-                <!-- p3 -->
-                <div class="col-6 col-md-3">
+                <!-- pastey item -->
+                <div class="col-6 col-md-3" v-for="(item,index) in product" :key="item.id">
                     <div class="item">
                         <div class="inner">
                             <div class="front">
-                                <img src="image/pastry3.jpg" alt="pastry">
+                                <img :src="item.image" :alt="item.title">
                                 <div class="back">
-                                    <p>Almond /  Icing Sugar / Egg Whites</p>
+                                    <p>{{item.desq}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="text_box">
-                            <h3>Ricciarelli</h3>
+                            <h3>{{item.title}}</h3>
                             <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- p4 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/pastry4.jpg" alt="pastry">
-                                <div class="back">
-                                    <p>Chocolate /  Butter / Egg / Cocoa Powder</p>
+                                <p>${{item.price}}</p>
+                                <div class="icon_box">
+                                    <i :class="item.icon"></i>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Chocolate Fudge Cookies</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- p5 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/pastry5.jpg" alt="pastry">
-                                <div class="back">
-                                    <p>Strawberry /  Cream / Egg</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Strawberry Cake</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- p6 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/pastry6.jpg" alt="pastry">
-                                <div class="back">
-                                    <p>Milk /  Egg / Honey / Butter</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Pancake</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
                             </div>
                         </div>
                     </div>
@@ -456,126 +159,29 @@
                         <p>Life's Pretty Straight <br>Without Tea.  </p>
                     </div>
                 </div>
-                <!-- t1 -->
-                <div class="col-6 col-md-3">
+                <!-- tea item -->
+                <div class="col-6 col-md-3" v-for="(item,index) in product" :key="item.id">
                     <div class="item">
                         <div class="inner">
                             <div class="front">
-                                <img src="image/tea1.jpg" alt="tea">
+                                <img :src="item.image" :alt="item.title">
                                 <div class="back">
-                                    <p>Lemon / Black Tea / Syrup</p>
+                                    <p>{{item.desq}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="text_box">
-                            <h3>Lemon Tea</h3>
+                            <h3>{{item.title}}</h3>
                             <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- t2 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/tea2.jpg" alt="tea">
-                                <div class="back">
-                                    <p>Matcha / Milk</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Matcha Latte</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- t3 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/tea3.jpg" alt="tea">
-                                <div class="back">
-                                    <p>Milk / Black Tea / Syrup</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Milk Tea</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- t4 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/tea4.jpg" alt="tea">
-                                <div class="back">
-                                    <p>Only Lavender Tea</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Lavender Tea</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
+                                <p>${{item.price}}</p>
                                 <div class="icon_box">
-                                    <i class="fa-solid fa-mug-hot"></i>
+                                    <i :class="item.icon"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- t5 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/tea5.jpg" alt="tea">
-                                <div class="back">
-                                    <p>Mint / Black Tea / Soda Water</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Mint Tea</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                                <div class="icon_box">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- t6 -->
-                <div class="col-6 col-md-3">
-                    <div class="item">
-                        <div class="inner">
-                            <div class="front">
-                                <img src="image/tea6.jpg" alt="tea">
-                                <div class="back">
-                                    <p>Coffee / Black Tea / Milk</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text_box">
-                            <h3>Yuenyeung</h3>
-                            <div class="data_box">
-                                <p>$5.30</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 
             </div>
         </div>
@@ -650,7 +256,6 @@
             <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
         </div>
     </footer>
-    <!-- <script src="js/all.js"></script> -->
     <script src="js/menu.js"></script>
     
 </body>

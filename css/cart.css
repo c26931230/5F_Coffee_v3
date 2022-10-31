@@ -1,6 +1,3 @@
-.shopping_cart {
-  overflow-x: hidden;
-}
 .shopping_cart .wrap {
   display: grid;
   grid-template-columns: 15% 45% 20% 20%;

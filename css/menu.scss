@@ -43,7 +43,6 @@ $main7:#f5f4f2;
         position: relative;
         border-radius: 5px;
         overflow: hidden;
-        // @include fadeout();
         opacity: 0;
         transition: 2.5s;
         display: block;
@@ -79,6 +78,7 @@ $main7:#f5f4f2;
             transform: translate(-50%);
             left: 50%;
             transition: .5s;
+            text-transform: capitalize;
 
         }
     }
@@ -100,8 +100,7 @@ $main7:#f5f4f2;
         .item{
             margin-bottom: 20px;
         }
-        .coffee_btn{
-            // border: 1px solid red;
+        .col-md-4:nth-child(2){ //coffee_btn
             order: -1;
         }
     }
@@ -156,7 +155,7 @@ $main7:#f5f4f2;
         }
     }
     .item{
-        perspective: 1000px;
+        // perspective: 8000px;
         cursor: pointer;
         border-radius: 5px;
         overflow: hidden;
@@ -238,6 +237,9 @@ $main7:#f5f4f2;
         top: 30%;
         transform:scaleX(-1);
     }
+    .col-md-3:nth-child(2), .col-md-3:nth-child(3){
+        order: -1;
+    }
 }
 .tea_menu_box{
     margin-bottom: 0;
@@ -247,6 +249,7 @@ $main7:#f5f4f2;
 @media screen and (max-width:767px) {
     .coffee_menu_box, .pastry_menu_box, .tea_menu_box{
         margin-bottom: 0;
+        overflow: hidden;
         .container{
             width: 100%;
             padding: 0 10px;
@@ -260,7 +263,8 @@ $main7:#f5f4f2;
             }
             &::after{
                 width: 100px;
-                height: 100px;  
+                height: 100px;
+                left: 38%;
             }
         }
         .item{
@@ -282,12 +286,13 @@ $main7:#f5f4f2;
     }
     .pastry_menu_box{
         .pastry_title{
-            order: -1;
             ::after{
                 top: 20%;
+                left: 50%;
             }
         }
     }
+    
 }
 /* #switch_menu */
 #switch_menu {

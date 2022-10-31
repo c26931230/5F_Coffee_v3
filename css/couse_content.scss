@@ -37,13 +37,7 @@ $main7:#f5f4f2;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    // @include fadeout();
-    opacity: 0;
-    transition: 2.5s;
-    // height: ;
     min-height: calc(100vh - 65px);
-
-    // margin-top: 50px;
     position: relative;
     margin-bottom: 50px;
     img{
@@ -51,14 +45,7 @@ $main7:#f5f4f2;
         bottom: 10px;
         left: 10px;
         width: 30%;
-        // border: 1px red solid;
-        
     }
-}
-.banner.active{
-    // @include fadein();
-    opacity: 1;
-    transition: 2.5s;
 }
 .sale_box{
     margin-bottom: 50px;
@@ -66,7 +53,6 @@ $main7:#f5f4f2;
     overflow: hidden;
     .txt_box{
         padding: 50px 20px;
-        @include ltr();
         h2{
             color: $main5;
             font-weight: 600;
@@ -80,13 +66,9 @@ $main7:#f5f4f2;
             text-align: center;
         }
     }
-    .txt_box.active{
-        @include rl_active();
-    }
     .info_box{
         background-color: $main6;
         padding: 30px 50px;
-        @include rtl();
         h3{
             color: $main4;
             font-weight: 600;
@@ -118,9 +100,6 @@ $main7:#f5f4f2;
         }
         
     }
-    .info_box.active{
-        @include rl_active();
-    }
 }
 
  @media screen and (min-width:768px) {
@@ -129,7 +108,6 @@ $main7:#f5f4f2;
         flex-wrap: wrap;
         align-items: stretch;
         justify-content: space-between;
-        // border: 1px red solid;
         margin-top: 50px;
         width: 90%;
         margin-left: auto;
@@ -181,9 +159,6 @@ $main7:#f5f4f2;
                 margin-right: auto;
                 width: fit-content;
                 transition: 1s;
-                &:hover{
-                    transform: scale(0.9);
-                }
             }
             
         }
@@ -198,7 +173,6 @@ $main7:#f5f4f2;
     .txt_box{
         position: relative;
         margin-bottom: 50px;
-        @include fadeout();
         h3{
             color: $main5;
             font-weight: 600;
@@ -217,40 +191,28 @@ $main7:#f5f4f2;
             padding: 0 10px;
         }
     }
-    .txt_box.active{
-        @include fadein();
-    }
     .img_box{
         display: flex;
         flex-wrap: wrap;
         // border: 1px red solid;
         padding: 0;
-        @include fadeout();
         .item{
             width: 50%;
             padding: 10px;
-            // border: 1px red solid;
             margin-bottom: 10px;
             img{
                 width: 100%;
-                // border: 1px red solid;
                 vertical-align: top;
-                // margin-bottom: 50px;
-                // border: 1px red solid;
                 padding: 0;
             }
             h4{
                 font-size: 16px;
                 color: #333;
                 font-weight: 600;
-                // border: 1px red solid;
                 text-align: center;
                 margin-top: 10px;
             }
         }
-    }
-    .img_box.active{
-        @include fadein();
     }
 }
 // skill平板
@@ -263,11 +225,8 @@ $main7:#f5f4f2;
         margin-right: auto;
         align-items: stretch;
         .txt_box{
-            // padding: 50px;
             width: 50%;
             position: relative;
-            // border: 1px red solid;
-            // order: -1;
             margin-bottom: 0;
             padding: 50px 0 50px 50px;
             h3{
@@ -290,19 +249,15 @@ $main7:#f5f4f2;
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-            // border: 1px green solid;
-            // padding: 50px;
             padding: 50px 50px 50px 0;
             order: -1;
             .item{
                 width: 50%;
                 padding: 10px;
-                // background-color: #607EAA;
                 img{
                     width: 100%;
                     vertical-align: top;
                     margin-bottom: 5px;
-                    // width: 200px;
                     margin-left: auto;
                     margin-right: auto;
                 }

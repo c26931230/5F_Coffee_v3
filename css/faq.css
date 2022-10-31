@@ -117,6 +117,9 @@
 .faq .wrap .item:nth-child(8) {
   margin-bottom: 0;
 }
+.faq .wrap .item .qus {
+  cursor: pointer;
+}
 .faq .wrap .item .data {
   padding: 10px 15px;
   display: flex;

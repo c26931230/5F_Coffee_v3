@@ -104,21 +104,7 @@ $(document).ready(function(){
             $('.discount > .item').removeClass('active')
         }
     }
-    // ---彈跳效果----
-    // function discount(){
-    //     let outerHeight = $('.discount').outerHeight();
-    //     let offsetTop = $('.discount').offset().top;
-    //     if(scrollY + innerHeight - outerHeight < offsetTop){
-    //         $('.discount > .item').stop(true).animate({
-    //             left:'50%',
-    //         },400,'easeOutQuint')
-    //     }
-    //     else{
-    //         $('.discount > .item').animate({
-    //             left:"-100%",
-    //         },400,'easeOutQuint')
-    //     }
-    // }
+
     // -----slogan 輪播圖-----
     let carouselBtn = document.querySelectorAll("input.carousel_btn");
     function carousel(i){
@@ -160,7 +146,6 @@ function carousel(i){
         ,4000
     );
 }
-// window.addEventListener("load",carousel(1));
 
   
   // ----loacation background-------

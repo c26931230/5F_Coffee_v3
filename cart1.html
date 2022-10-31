@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5F coffee | Reservation</title>
+    <title>5F coffee | Shopping Cart</title>
    
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid_system.css">
-    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/cart1.css">
     <link rel="stylesheet" href="css/common.css">
 
     <!-- font David Libre -->
@@ -17,8 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 
-    
-    
     <!-- icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
     <!-- ico -->
@@ -28,6 +26,9 @@
     <!-- jquery -->
     <script src="js/jquery-3.6.1.js"></script>
     <script src="js/jquery-ui.js"></script>
+
+    <!-- vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -48,7 +49,7 @@
                 <ul class="nav_links">
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="course.html">Course</a></li>
-                    <li class="tab"><a href="reservation.html">Reservation</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
                     <li><a href="product.html">Products</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
@@ -56,107 +57,57 @@
             <!-- function -->
             <div class="function_box">
                 <a href="member.html"><i class="fa-solid fa-user"></i></a>
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.html" class="tab"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
     </header>
-    <!-- reservation_banner -->
-    <section class="reservation">
-        <div class="txt_box">
-            <p>Wenn der Altenberg nicht im Kaffeehaus ist, ist er am Weg dorthin</p>
+    <!-- shopping cart -->
+    <section class="shopping_cart">
+        <div class="product_box">
+            <div class="title_box">
+                <h2>Product</h2>
+                <h2>Quantity</h2>
+                <h2>Subtotal</h2>
+            </div>
+            <div class="item_box" v-for="(item, index) in product" :key="item.id">
+                <div class="img_box">
+                    <a href="product_detail.html">
+                        <img :src="item.image" :alt="item.title"> <!-- product img -->
+                    </a>
+                </div>
+                <div class="info_box">
+                    <h3>{{item.title}}</h3> <!-- product name -->
+                    <p>${{item.price}}</p> <!-- price -->
+                    <a href="">Remove</a>
+                </div>
+                <div class="count_box">
+                    <div class="control">
+                        <button @click="reduceCount(index)">-</button>
+                        <input type="number" min="1"  v-model="count[index]">  <!-- product count -->
+                        <button @click="addCount(index)">+</button>
+                    </div>
+                </div>
+                <div class="total_box">
+                    <p>${{item.total}}</p>
+                </div>
+            </div>     
+        </div>
+        <div class="sum_box">
+            <div class="item">
+                <h4>Subtotal</h4>
+                <p>$a</p>
+            </div>
+            <div class="item">
+                <h4>Tax</h4>
+                <p>$a</p>
+            </div>
+            <div class="item">
+                <h4>Total</h4>
+                <p>$a</p>
+            </div>
+        </div>
            
-        </div>
-        <div class="img_box">
-            <img src="image/reservation_banner.jpg" alt="coffee">
-        </div>
-        <div class="form_box">
-            <form>
-                <!-- name -->
-                <div class="item">
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-                </div>
-                <!-- phone -->
-                <div class="item">
-                    <label for="phone">Phone</label>
-                    <input type="tel" maxlength="10" id="phone">
-                </div>
-                <!-- mail -->
-                <div class="item">
-                    <label for="mail">Mail</label>
-                    <input type="mail" id="mail">
-                </div>
-                <!-- party size -->
-                <div class="item">
-                    <label>Party Size</label>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                    </select>
-                </div>
-                <!-- date -->
-                <div class="item">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" min="2022-10-26" max="2023-1-26" placeholder="10/26/2022">
-                    <!-- <input type="text" id="date" min="2022-10-26" max="2022-11-26" placeholder="10/26/2022" type="text" onfocus="(this.type = 'date')"> -->
-                </div>
-                <!-- time -->
-                <div class="item">
-                    <label for="time">Time</label>
-                    <select>
-                        <option value="1">08:00</option>
-                        <option value="2">08:30</option>
-                        <option value="3">09:00</option>
-                        <option value="4">09:30</option>
-                        <option value="5">10:00</option>
-                        <option value="6">10:30</option>
-                        <option value="7">11:00</option>
-                        <option value="8">11:30</option>
-                        <option value="9">12:00</option>
-                        <option value="10">12:30</option>
-                        <option value="11">13:00</option>
-                        <option value="12">13:30</option>
-                        <option value="13">14:00</option>
-                        <option value="14">14:30</option>
-                        <option value="15">15:00</option>
-                        <option value="16">15:30</option>
-                        <option value="17">16:00</option>
-                        <option value="18">16:30</option>
-                        <option value="19">17:00</option>
-                        <option value="20">17:30</option>
-                        <option value="21">18:00</option>
-                        <option value="22">18:30</option>
-                        <option value="23">19:00</option>
-                    </select>
-                </div>
-                <div class="btn">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-       
     </section>
-    <!-- slogan_box -->
-    <section class="slogan_box">
-        <div class="wrap">
-            <div class="img_box">
-                <img src="image/r1.jpg" alt="coffee">
-                <span></span>
-            </div>
-            <div class="txt_box">
-                <p>It’s Time to Enjoy the Finer Things in Life.</p>
-                <img src="image/r2.jpg" alt="coffee">
-            </div>
-        </div>
-        
-    </section>
-
     <!-- footer -->
     <footer class="footer">
         <div class="wrap">
@@ -228,5 +179,6 @@
             <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
         </div>
     </footer>
+    <script src="js/cart.js"></script>
 </body>
 </html>

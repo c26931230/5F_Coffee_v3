@@ -237,7 +237,6 @@ $main7:#f5f4f2;
                     input{
                         border-color: $main2;
                         color: $main2;
-                        
                     }
                     input:focus{
                         border: 2px solid $main2;
@@ -449,9 +448,7 @@ $main7:#f5f4f2;
             top: 50%;
             left: 50%;
             color: #333;
-            &:hover{
-                color: $main4;
-            }
+           
         }
     }
     input:focus{

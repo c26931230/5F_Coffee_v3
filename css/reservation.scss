@@ -40,7 +40,7 @@ $main7:#f5f4f2;
     .txt_box{
         padding: 50px 0;
         position: relative;
-        @include fadeout();
+        // @include fadeout();
         p{
             font-size: 30px;
             color: $main5;
@@ -49,13 +49,13 @@ $main7:#f5f4f2;
             padding: 20px 40px;
         }
     }
-    .txt_box.active{
-        @include fadein();
-    }
+    // .txt_box.active{
+    //     // @include fadein();
+    // }
     .form_box{
         background-color: $main6;
         padding: 30px 0;
-        @include ltr();
+        // @include ltr();
         // transform: translateX(-10%);
         form{
             .item{
@@ -130,9 +130,9 @@ $main7:#f5f4f2;
             }
         }
     } 
-    .form_box.active{
-        @include rl_active();
-    }  
+    // .form_box.active{
+    //     @include rl_active();
+    // }  
     .img_box{
         display: none;
     }
@@ -153,7 +153,7 @@ $main7:#f5f4f2;
             padding: 30px 10px;
             width: 85%;
             position: relative;
-            transform: translateY(-70%) translateX(-100%);
+            transform: translateY(-70%);
             // opacity: 1;
             border-radius: 0 10px 10px 0;
             
@@ -193,18 +193,18 @@ $main7:#f5f4f2;
         .img_box{
             display: block;
             width: 50%;
-            @include rtl();
+            // @include rtl();
             img{
                 width: 100%;
                 vertical-align: top;
             }
         }
-        .img_box.active{
-            @include rl_active();
-        }
+        // .img_box.active{
+        //     @include rl_active();
+        // }
         .form_box.active{
             // transform: translateY(-70%) translateX(-0%);
-            transform: translateY(-70%) translateX(0%);
+            transform: translateY(-70%);
         }
     }
 }
@@ -219,11 +219,11 @@ $main7:#f5f4f2;
             }
         }
         .form_box{
-            transform: translateY(-120%) translateX(-100%);
+            transform: translateY(-120%);
             border-radius: 0 10px 10px 0;
         }   
         .form_box.active{
-            transform: translateY(-120%) translateX(-0%);
+            transform: translateY(-120%);
             border-radius: 0 10px 10px 0;
         }   
         .img_box{
@@ -248,7 +248,7 @@ $main7:#f5f4f2;
     // margin-bottom: 0;
     .img_box{ //把手 + 色塊
         width: 100%;
-        @include fadeout();
+        // @include fadeout();
         img{
             width: 100%;
             vertical-align: top;
@@ -264,13 +264,13 @@ $main7:#f5f4f2;
             margin-top: 30px;
         }
     }
-    .img_box.active{
-        @include fadein();
-    }
+    // .img_box.active{
+    //     @include fadein();
+    // }
     .txt_box{  //slogan + art
         width: 100%;
         transform: translateY(-20%);
-        @include fadeout();
+        // @include fadeout();
         // border: 1px solid red;
         margin-bottom: 50px;
         p{
@@ -287,9 +287,9 @@ $main7:#f5f4f2;
             padding: 0 10px;
         }
     }
-    .txt_box.active{
-        @include fadein();
-    }
+    // .txt_box.active{
+    //     @include fadein();
+    // }
     
 }
 
@@ -300,7 +300,7 @@ $main7:#f5f4f2;
         position: relative;
         margin-bottom: 100px;
         display: block;
-        overflow-x: hidden;
+        // overflow-x: hidden;
         .wrap{
             margin: 0 auto;
             width: 90%;
@@ -315,7 +315,7 @@ $main7:#f5f4f2;
         .img_box{ //把手 + 色塊
             width: 50%;
             padding: 20px;
-            @include ltr();
+            // @include ltr();
             img{
                 width: 90%;
                 padding: 0;
@@ -333,7 +333,7 @@ $main7:#f5f4f2;
             width: 50%;
             transform: translateY(10%);
             padding: 20px;
-            @include rtl();
+            // @include rtl();
             p{
                 font-size: 40px;
                 padding: 50px 50px 50px 0;

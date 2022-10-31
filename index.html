@@ -28,6 +28,9 @@
     <!-- jquery -->
     <script src="js/jquery-3.6.1.js"></script>
     <script src="js/jquery-ui.js"></script>
+
+    <!-- vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -40,7 +43,7 @@
                 <span></span>
             </label>
             <div class="logo_box">
-                <a href="index.html"><img src="image/5flogo.png" alt="5F Coffee"></a>
+                <h1><a href="index.html"><img src="image/5flogo.png" alt="5F Coffee"></a></h1>
             </div>
             <!-- nav -->
             <nav class="nav">
@@ -63,7 +66,7 @@
     <section class="index_banner">
         <div class="wrap">
             <div class="item banner_fadein">
-                <h1 id="h1">Welcome to 5F Coffee</h1>
+                <h2>Welcome to 5F Coffee</h2>
             </div>
             <div class="item banner_fadein">
                 <p>If you love coffee, this is where you belong.We don't make your coffee. We make your day.We're all just looking for the same thing.</p>
@@ -102,8 +105,7 @@
             </div>
         </div>     
     </section>
-    
-    <!-- new arrivals -->
+    <!-- vue new_arrivals -->
     <section class="new_arrivals">
         <div class="title_box">
             <h2 class="h2">New Arrivals</h2>
@@ -111,113 +113,17 @@
         </div>
         <div class="sliders">
             <div class="wrapper">
-                <div class="item">
-                    <img src="image/new1.jpg" alt="Ice Cream">
-                    <h3>Ice Cream</h3>
+                <div class="item" v-for="(item, index) in product" :key="item.id">
+                    <img :src="item.image" :alt="item.title">
+                    <h3>{{item.title}}</h3>
                 </div>
-                <div class="item">
-                    <img src="image/new2.jpg" alt="Mint Tea">
-                    <h3>Mint Tea</h3>
+                <div class="item" v-for="(item, index) in product" :key="item.id">
+                    <img :src="item.image" :alt="item.title">
+                    <h3>{{item.title}}</h3>
                 </div>
-                <div class="item">
-                    <img src="image/new3.jpg" alt="Doughnut">
-                    <h3>Doughnut</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new4.jpg" alt="Black Tea">
-                    <h3>Black Tea</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new5.jpg" alt="Cocktail">
-                    <h3>Cocktail</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new6.jpg" alt="Napoleon Pie">
-                    <h3>Napoleon Pie</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new7.jpg" alt="Milk Tea">
-                    <h3>Milk Tea</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new8.jpg" alt="Punch Cake">
-                    <h3>Punch Cake</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new1.jpg" alt="Ice Cream">
-                    <h3>Ice Cream</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new2.jpg" alt="Mint Tea">
-                    <h3>Mint Tea</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new3.jpg" alt="Doughnut">
-                    <h3>Doughnut</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new4.jpg" alt="Black Tea">
-                    <h3>Black Tea</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new5.jpg" alt="Cocktail">
-                    <h3>Cocktail</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new6.jpg" alt="Napoleon Pie">
-                    <h3>Napoleon Pie</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new7.jpg" alt="Milk Tea">
-                    <h3>Milk Tea</h3>
-                </div>
-                <div class="item">
-                    <img src="image/new8.jpg" alt="Punch Cake">
-                    <h3>Punch Cake</h3>
-                </div>
-                
-                    <!-- ============ -->
-            </div>    
+            </div>
         </div>
-         <!-- <div class="wrapper">
-            <div class="item">
-                <img src="image/new1.jpg" alt="Ice Cream">
-                <h3>Ice Cream</h3>
-            </div>
-            <div class="item">
-                <img src="image/new2.jpg" alt="Cocktail">
-                <h3>Cocktail</h3>
-            </div>
-            <div class="item">
-                <img src="image/new3.jpg" alt="Punch Cake">
-                <h3>Punch Cake</h3>
-            </div>
-            <div class="item">
-                <img src="image/new4.jpg" alt="Doughnut">
-                <h3>Doughnut</h3>
-            </div>
-            <div class="item">
-                <img src="image/new5.jpg" alt="Milk Tea">
-                <h3>Milk Tea</h3>
-            </div>
-            <div class="item">
-                <img src="image/new6.jpg" alt="Napoleon Pie">
-                <h3>Napoleon Pie</h3>
-            </div>
-            <div class="item">
-                <img src="image/new7.jpg" alt="Mint Tea">
-                <h3>Mint Tea</h3>
-            </div>
-            <div class="item">
-                <img src="image/new8.jpg" alt="Black Tea">
-                <h3>Black Tea</h3>
-            </div>
-         </div>
-       </div> -->
-        <div class="btn_box">
-                <a href="menu.html" class="btn_2">View More</a>
-        </div>
-    </section> 
+    </section>
      <!-- location -->
     <section class="location">
         <div class="bg" id="coffee_shop_bg"></div>
@@ -332,7 +238,56 @@
             <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
         </div>
     </footer>
-
+    <script>
+        // -----new arrival Vue-----
+        Vue.createApp({
+            data(){
+                return{
+                    product:[{
+                        id:1,
+                        title:"Ice Cream",
+                        image:"image/new1.jpg"
+                    },
+                    {
+                        id:2,
+                        title:"Mint Tea",
+                        image:"image/new2.jpg"
+                    },
+                    {
+                        id:3,
+                        title:"Doughnut",
+                        image:"image/new3.jpg"
+                    },
+                    {
+                        id:4,
+                        title:"Black Tea",
+                        image:"image/new4.jpg"
+                    },
+                    {
+                        id:5,
+                        title:"Cocktail",
+                        image:"image/new5.jpg"
+                    },
+                    {
+                        id:6,
+                        title:"Napoleon Pie",
+                        image:"image/new6.jpg"
+                    },
+                    {
+                        id:7,
+                        title:"Punch Cake",
+                        image:"image/new7.jpg"
+                    },
+                    {
+                        id:8,
+                        title:"Punch Cake",
+                        image:"image/new8.jpg"
+                    },
+                ]
+                }
+            }
+        }).mount(".new_arrivals")
+    </script>
     <script src="js/all.js"></script>
 </body>
 </html>

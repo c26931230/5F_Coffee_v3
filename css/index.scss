@@ -65,7 +65,7 @@ $main7:#f5f4f2;
             grid-area: 1/1/2/3;
             position: relative;
             padding: 20px;
-            h1{
+            h2{
                 font-size: 70px;
                 font-weight: 600;
                 font-family: 'David Libre', serif;
@@ -130,7 +130,7 @@ $main7:#f5f4f2;
         .wrap{
             .item:nth-child(1){
                 padding: 0;
-                h1{
+                h2{
                     font-size: 80px;
                     position: absolute;
                     transform: translateY(-50%);
@@ -178,7 +178,7 @@ $main7:#f5f4f2;
             .item:nth-child(1){
                 grid-area: 1/1/2/2;
                 padding: 40px 30px 30px 45px;
-                h1{
+                h2{
                     text-align: left;
                 }
             }
@@ -211,7 +211,7 @@ $main7:#f5f4f2;
     .index_banner{
         .wrap{
             .item:nth-child(1){
-                h1{
+                h2{
                     font-size: 45px;
                 }
             }

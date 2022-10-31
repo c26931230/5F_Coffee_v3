@@ -28,6 +28,8 @@
     <!-- jquery -->
     <script src="js/jquery-3.6.1.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <!-- vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -71,15 +73,16 @@
                    </div>
         </div>
     </section>
+    
     <!-- faq_main -->
     <section class="faq">
         <div class="wrap">
-            <!-- q1  -->
-            <div class="item">
+            <!-- q1-4 -->
+            <div class="item" v-for="(item, index) in question" :key="item.id">
                 <div class="qus data">
                    <div class="qa_box">Q</div>
                    <div class="text_box">
-                        <h3>Your baristas are awesome! Who can I share my experience with?</h3>
+                        <h3>{{item.qus}}</h3>
                         <div class="faq_btn">
                             <span></span>
                             <span></span>
@@ -90,17 +93,17 @@
                     <div class="ans data">
                         <div class="qa_box">A</div>
                         <div class="text_box">
-                            <p>We are so grateful that our crew showed such compassion and love to you during your visit. You can share your experience with us at 07-2655-5555 or 5fcoffee@gmail.com.</p>
+                            <p>{{item.ans}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- q2  -->
-            <div class="item">
+            <!-- q4-8 -->
+            <div class="item" v-for="(item, index) in question" :key="item.id">
                 <div class="qus data">
                    <div class="qa_box">Q</div>
                    <div class="text_box">
-                        <h3>Where do you source your coffee beans?</h3>
+                        <h3>{{item.qus}}</h3>
                         <div class="faq_btn">
                             <span></span>
                             <span></span>
@@ -111,138 +114,11 @@
                     <div class="ans data">
                         <div class="qa_box">A</div>
                         <div class="text_box">
-                            <p>Our Private Reserve is a blend made of 100 percent Arabica beans from Brazil, Colombia and El Salvador.</p>
+                            <p>{{item.ans}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- q3  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>My drink wasn’t made right!</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>Our drinks are guaranteed to satisfy! Any time you get a drink you aren’t happy with, please swing by the shop you visited and so we can make you a new drink! (Don't worry, it's on us!) If you aren’t able to get back to the shop, shoot us an email at 5fcoffee@gmail.com and we’ll get you taken care of!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- q4  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>What forms of payments do you accept?</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>We accept cash, all major credit cards and Apple Pay!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- q1  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>Your baristas are awesome! Who can I share my experience with?</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>We are so grateful that our crew showed such compassion and love to you during your visit. You can share your experience with us at 07-2655-5555 or 5fcoffee@gmail.com.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- q2  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>Where do you source your coffee beans?</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>Our Private Reserve is a blend made of 100 percent Arabica beans from Brazil, Colombia and El Salvador.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- q3  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>My drink wasn’t made right!</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>Our drinks are guaranteed to satisfy! Any time you get a drink you aren’t happy with, please swing by the shop you visited and so we can make you a new drink! (Don't worry, it's on us!) If you aren’t able to get back to the shop, shoot us an email at 5fcoffee@gmail.com and we’ll get you taken care of!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- q4  -->
-            <div class="item">
-                <div class="qus data">
-                   <div class="qa_box">Q</div>
-                   <div class="text_box">
-                        <h3>What forms of payments do you accept?</h3>
-                        <div class="faq_btn">
-                            <span></span>
-                            <span></span>
-                        </div>
-                   </div>    
-                </div>
-                <div class="ans_box">
-                    <div class="ans data">
-                        <div class="qa_box">A</div>
-                        <div class="text_box">
-                            <p>We accept cash, all major credit cards and Apple Pay!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <p>If you have any further questions,please <a href="http://gmail.com" target="_blank" class="btn">Contact Us</a></p>
         </div>
     </section>

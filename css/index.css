@@ -41,7 +41,7 @@
   position: relative;
   padding: 20px;
 }
-.index_banner .wrap .item:nth-child(1) h1 {
+.index_banner .wrap .item:nth-child(1) h2 {
   font-size: 70px;
   font-weight: 600;
   font-family: "David Libre", serif;
@@ -101,7 +101,7 @@
   .index_banner .wrap .item:nth-child(1) {
     padding: 0;
   }
-  .index_banner .wrap .item:nth-child(1) h1 {
+  .index_banner .wrap .item:nth-child(1) h2 {
     font-size: 80px;
     position: absolute;
     transform: translateY(-50%);
@@ -137,7 +137,7 @@
     grid-area: 1/1/2/2;
     padding: 40px 30px 30px 45px;
   }
-  .index_banner .wrap .item:nth-child(1) h1 {
+  .index_banner .wrap .item:nth-child(1) h2 {
     text-align: left;
   }
   .index_banner .wrap .item:nth-child(2) {
@@ -163,7 +163,7 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .index_banner .wrap .item:nth-child(1) h1 {
+  .index_banner .wrap .item:nth-child(1) h2 {
     font-size: 45px;
   }
   .index_banner .wrap .item:nth-child(2) {

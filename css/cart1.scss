@@ -1,0 +1,147 @@
+$main1:#0A134D;
+$main2:#fff;
+$main3:#E77710;
+$main4:#F1D00A;
+$main5:#607EAA;
+$main6:#13334E;
+$main7:#f5f4f2;
+
+.shopping_cart{
+    width: 80%;
+    margin: 50px auto;
+    .product_box{
+        .title_box{
+            display: flex;
+            background-color: $main5;
+            color: $main2;
+            padding: 10px 5px;
+            font-size: 20px;
+            h2:nth-child(1){
+                width: 60%;
+            }
+            h2:nth-child(2){
+                width: 20%;
+            }
+            h2:nth-child(3){
+                width: 20%;
+                text-align: right;
+            }
+        }
+        .item_box{
+            display: flex;
+            // border: 1px solid red;
+            // position: relative;
+            align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            .img_box{
+                width: 15%;
+                img{
+                    width: 90%;
+                    vertical-align: top;
+                }
+            }
+            .info_box{
+                width: 45%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-right: 10px;
+                // border: 1px solid #333;
+                h3{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 18px;
+                }
+                a{
+                    display: inline-block;
+                    width: fit-content;
+                    color: $main3;
+                    font-size: 16x;
+                    transition: 0.5s;
+                    // border: 1px solid red;
+                    &:hover{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+            .count_box{
+                width: 20%;
+                // border: 1px solid blue;
+                position: relative;
+                .control{
+                    position: absolute;
+                    bottom: 0;
+                    // margin-top: auto;
+                    // border: 1px solid red;
+
+                }
+                button{
+                    background-color: #333;
+                    color: $main2;
+                    font-size: 16px;
+                    padding: 6px;
+                    cursor: pointer;
+                }
+                input{
+                    font-size: 16px;
+                    padding: 6px 10px;
+                    width: 40px;
+                }
+                input[type=number]::-webkit-outer-spin-button,
+                input[type=number]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    appearance: none;
+                } 
+            }
+            .total_box{
+                width: 20%;
+                // border: 1px solid blue;
+                position: relative;
+                p{
+                    // border: 1px solid red;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 18px;
+                    text-align: right;
+                    padding-right: 10px;
+                    // border: 1px solid red;
+                    align-self: flex-end;
+
+                }
+
+            }
+        }
+    }
+    .sum_box{
+        width: 40%;
+        // margin-left: auto;
+        // height: 100px;
+        font-size: 20px;
+        margin: 50px 0 50px auto;
+        border: 1px solid red;
+        .item{
+            margin-bottom: 10px;
+            padding: 10px 0;
+            border: 1px solid red;
+        }
+        h4{
+            width: 50%;
+            // border: 1px solid red;
+            display: inline-block;
+        }
+        p{
+            width: 50%;
+            // border: 1px solid red;
+            display: inline-block;
+            text-align: right;
+        }
+    }
+}
