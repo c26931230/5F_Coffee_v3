@@ -25,7 +25,10 @@ Vue.createApp({
                 },
             ],
             count:[],
-            total:0
+            total:0,
+            subtotl:0,
+            tax:0,
+            sumtotal:0,
         }
     },
     mounted(){
