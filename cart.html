@@ -26,6 +26,9 @@
     <!-- jquery -->
     <script src="js/jquery-3.6.1.js"></script>
     <script src="js/jquery-ui.js"></script>
+
+    <!-- vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <!-- header -->
@@ -60,90 +63,51 @@
     </header>
     <!-- shopping cart -->
     <section class="shopping_cart">
-        <div class="wrap">
+        <div class="product_box">
+            <div class="title_box">
+                <h2>Product</h2>
+                <h2>Quantity</h2>
+                <h2>Subtotal</h2>
+            </div>
+            <div class="item_box" v-for="(item, index) in product" :key="item.id">
+                <div class="img_box">
+                    <a href="product_detail.html">
+                        <img :src="item.image" :alt="item.title"> <!-- product img -->
+                    </a>
+                </div>
+                <div class="info_box">
+                    <h3>{{item.title}}</h3> <!-- product name -->
+                    <p>${{item.price}}</p> <!-- price -->
+                    <a href="">Remove</a>
+                </div>
+                <div class="count_box">
+                    <div class="control">
+                        <button @click="reduceCount(index)">-</button>
+                        <input type="number" min="1"  v-model="count[index]">  <!-- product count -->
+                        <button @click="addCount(index)">+</button>
+                    </div>
+                </div>
+                <div class="total_box">
+                    <!-- 項目小計 -->
+                    <p>${{item.total}}</p>
+                </div>
+            </div>     
+        </div>
+        <div class="sum_box">
             <div class="item">
-                <p>Product</p>
+                <h4>Subtotal</h4>
+                <p>${{subtotal||0}}</p>
             </div>
             <div class="item">
-                <p>Quantity</p>
+                <h4>Tax</h4>
+                <p>${{tax||0}}</p>
             </div>
             <div class="item">
-                <p>Subtotal</p>
-            </div>
-            <!-- product1 -->
-            <div class="item">
-                <a href="product_detail.html"><img src="image/kettle3.jpg" alt="water kettle"></a>
-            </div>
-             
-            <div class="item">
-                <p>Artisan Electric Gooseneck Kettle</p>
-                <p>$159.00</p>
-                <a href="#">Remove</a>
-            </div>
-            
-            <div class="item">
-                <input type="number" value="1" name="grade" min="1" max="9" step="1" required>
-            </div>
-            <div class="item">
-                <p>$159.00</p>
-            </div>
-            <!-- product2 -->
-            <div class="item">
-                <a href="product_detail.html"><img src="image/pitcher1.jpg" alt="milk pitcher"></a>
-            </div>
-             
-            <div class="item">
-                <p>Tiamo 450ml Stainless Steel Milk Jug</p>
-                <p>$47.00</p>
-                <a href="#">Remove</a>
-            </div>
-            <div class="item">
-                <input type="number" value="1" name="grade" min="1" max="9" step="1" required>
-            </div>
-            <div class="item">
-                <p>$47.00</p>
-            </div>
-            <!-- product3-->
-            <div class="item">
-                <a href="product_detail.html"><img src="image/dripper1.jpg" alt="coffee dripper"></a>
-            </div>
-             
-            <div class="item">
-                <p>Hario V60 Ceramic 02 White</p>
-                <p>$21.90</p>
-                <a href="#">Remove</a>
-            </div>
-            
-            <div class="item">
-                <input type="number" value="2" name="grade" min="1" max="9" step="1" required>
-            </div>
-            <div class="item">
-                <p>$43.80</p>
+                <h4>Total</h4>
+                <p>${{sumtotal||0}}</p>
             </div>
         </div>
-        <div class="sum">
-            <div class="item">
-                <p>Subtotal</p>
-            </div>
-            <div class="item">
-                <p>$249.80</p>
-            </div>
-            <div class="item">
-                <p>Tax</p>
-            </div>
-            <div class="item">
-                <p>$24.98</p>
-            </div>
-            <div class="item">
-                <p>Total</p>
-            </div>
-            <div class="item">
-                <p>$247.78</p>
-            </div>
-            <div class="item">
-                <a href="#">Proceed to Checkout</a>
-            </div>
-        </div>
+           
     </section>
     <!-- footer -->
     <footer class="footer">
@@ -151,7 +115,6 @@
             <div class="item open">
                 <h2>OPENNING  HOURS</h2>
                 <div class="text_box">
-                    <!-- <h2>OPENNING  HOURS</h2> -->
                     <p>Mon - Fri: 08:00 - 19:00</p>
                     <p>Sat -  Sun: 09:00 - 19:00 </p>
                 </div>
@@ -216,5 +179,6 @@
             <p>本網站為緯育TibaMe前端設計工程師班第79期學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理</p>
         </div>
     </footer>
+    <script src="js/cart.js"></script>
 </body>
 </html>
